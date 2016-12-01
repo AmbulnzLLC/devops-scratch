@@ -1,0 +1,8 @@
+version: '2'
+services:
+  nodepoc:
+    image: jakebladt/node-poc
+    cpu_shares: 100
+    mem_limit: 524288000
+    ports:
+      - "80:80"
