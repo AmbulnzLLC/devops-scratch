@@ -1,0 +1,23 @@
+{
+  "name": "recvecho",
+  "version": "1.0.0",
+  "description": "Receive and echo on REDIS channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AmbulnzLLC/devops-scratch.git"
+  },
+  "keywords": [
+    "redis",
+    "echo"
+  ],
+  "author": "Jake Bladt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
+  },
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme"
+}
