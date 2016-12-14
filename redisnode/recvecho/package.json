@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
   },
-  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme"
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme",
+  "dependencies": {
+    "redis": "^2.6.3"
+  }
 }
