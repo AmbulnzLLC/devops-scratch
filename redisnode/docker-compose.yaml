@@ -12,3 +12,11 @@ services:
     environment:
       NODE_ENV: develop
       REDIS_URL: redis://redis-relay:6379
+  recvecho:
+    build:
+      context: ./recvecho
+      dockerfile: Dockerfile
+    image: recvecho
+    environment:
+      NODE_ENV: develop
+      REDIS_URL: redis://redis-relay:6379
