@@ -15,6 +15,3 @@ const subClient = redis.createClient(redisUrl);
 subClient.on("subscribe", (channel, count) => pubClient.publish("channel0", "Welcome to " + channel));
 subClient.on("message", (channel, message) => console.log(channel + ":", message));
 subClient.subscribe("channel0");
-
-subClient.quit();
-pubClient.quit();
