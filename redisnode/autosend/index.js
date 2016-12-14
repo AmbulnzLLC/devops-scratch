@@ -14,7 +14,9 @@ const subClient = redis.createClient(redisUrl);
 
 function startLoop(channel, count) {
     pubClient.publish("channel0", "Welcome to " + channel);
-
+    setInterval(
+        () => pubClient.publish("channel0", Date.now()),
+        1250);
 }
 
 subClient.on("subscribe", startLoop);
