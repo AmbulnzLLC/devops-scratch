@@ -4,3 +4,11 @@ services:
     image: redis:3.2.6
     ports:
      - "6379:6379"
+  autosend:
+    build:
+      context: ./autosend
+      dockerfile: Dockerfile
+    image: autosend
+    environment:
+      NODE_ENV: develop
+      REDIS_URL: redis: redis-relay:6379
