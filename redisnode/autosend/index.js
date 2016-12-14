@@ -12,6 +12,11 @@ const pubClient = redis.createClient(redisUrl);
 console.log('creating sub client');
 const subClient = redis.createClient(redisUrl);
 
-subClient.on("subscribe", (channel, count) => pubClient.publish("channel0", "Welcome to " + channel));
+function startLoop(channel, count) {
+    pubClient.publish("channel0", "Welcome to " + channel);
+
+}
+
+subClient.on("subscribe", startLoop);
 subClient.on("message", (channel, message) => console.log(channel + ":", message));
 subClient.subscribe("channel0");
