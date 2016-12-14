@@ -1,0 +1,26 @@
+{
+  "name": "autosend",
+  "version": "1.0.0",
+  "description": "redis-autosend",
+  "main": "index.js",
+  "dependencies": {
+    "redis": "^2.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AmbulnzLLC/devops-scratch.git"
+  },
+  "keywords": [
+    "autosend"
+  ],
+  "author": "Jake Bladt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
+  },
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme"
+}
