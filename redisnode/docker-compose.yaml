@@ -11,4 +11,4 @@ services:
     image: autosend
     environment:
       NODE_ENV: develop
-      REDIS_URL: redis: redis-relay://6379
+      REDIS_URL: redis://redis-relay:6379
