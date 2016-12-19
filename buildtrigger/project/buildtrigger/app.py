@@ -12,3 +12,7 @@ def index():
 def appinfo():
     return {'appname': 'Build Trigger',
             'version': '0.1.0'}
+
+@app.route('/job/{id}')
+def jobstatus(id):
+    return {'job-id': id}

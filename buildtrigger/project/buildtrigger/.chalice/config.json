@@ -1,4 +1,5 @@
 {
+  "lambda_arn": "arn:aws:lambda:us-west-2:431240526133:function:buildtrigger", 
   "app_name": "buildtrigger", 
   "stage": "dev"
 }
