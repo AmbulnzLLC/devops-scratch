@@ -16,3 +16,11 @@ def appinfo():
 @app.route('/job/{id}')
 def jobstatus(id):
     return {'job-id': id}
+
+@app.route('/commit', methods=['PUT'])
+def commit():
+    return {'echo-body': app.current_request.json_body}
+
+@app.route('/buildstep', methods=['PUT'])
+def commit():
+    return {'echo-body': app.current_request.json_body}
