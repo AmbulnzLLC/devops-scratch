@@ -22,6 +22,12 @@ You can then push your code branch to CodeCommit using the git cli:
 
 ```git push amazon feature/AM-xxx/fixBrokenThing```
 
+## Step 2: Code to Containers
+
+There is a build project set up in [Amazon Code Build](https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/projects) called js-servicecontainers. Using the branch
+you just pushed, start the build process. This will create the containers needed to run the service sandbox and store them in the [Amazon Elastic Container Registry](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
+The build process can take up to 20-30 minutes.
+
 ## Update History
 * 5-Jan-2017 - Initial document
 
