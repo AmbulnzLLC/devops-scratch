@@ -10,6 +10,16 @@ The components are deployed to the AWS (Amazon Web Services) cloud using EC2
 (Elastic Compute Cloud) instances and the 
 EC2 Container Service (ECS).
 
+## Prerequisites
+The assumption made in this documentation is that the user is working on a MacBook running a reasonably modern Darwin-based OS (MacOS) 
+configured to build and run Ambulnz's suite of node apps. See the main project readme for details.
+  
+Additionally, the following should be installed:
+
+* [The AWS command-line tool](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+* [The Elastic Container Service command-line tool](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
+* [Docker](https://docs.docker.com/docker-for-mac/)
+
 ## Step 1: Github to Amazon
 
 When a code branch of the [JSApps repository](https://github.com/AmbulnzLLC/JSApps) on github is ready to be deployed into
@@ -30,7 +40,10 @@ The build process can take up to 20-30 minutes.
 
 ## Step 3: Convert Docker Compose File to ECS Task
 
-If any changes have been make to docker-compose-sandbox.yaml in the JSApps repository since the last deployment,  
+If any changes have been make to docker-compose-sandbox.yaml in the JSApps repository since the last deployment, you'll need to create a new task definition in
+ ECS. To do so, navigate to the project directory and type:
+  
+  ```ecs-cli compose --file=./docker-compose-sandbox.yaml```
 
 ## Update History
 * 5-Jan-2017 - Initial document
