@@ -89,7 +89,12 @@ Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.am
  
 If everything works correctly, you should now be able to navigate to your new domain.
 
+## Coda: Cleaning up assets
 
+When you're done with your installation, you can clear up the expensive assets created by navigating to the service you created in the ECS console
+and updating it to have a task count of zero. Once the service is stopped, you can delete the cluster, which will also delete the EC2 instances used and the CloudFormation stack.
+ 
+ For a full clean-up, you can also delete the load balancer, target group, and DNS A record you created (providing you haven't shared them with other services.)
 
 ## Update History
 * 5-Jan-2017 - Initial document
