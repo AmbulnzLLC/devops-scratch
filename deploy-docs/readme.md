@@ -81,7 +81,15 @@ Once steps 2-4 are completed successfully, navigate to the [ECR Container Cluste
 
 The task definition is the highest tagged number of ecs-compose-JSApps (currently ecs-compose-JSApps:8.) Set the number of tasks to 1 and make a note of the name you give the service.
 
-Click "Configure ESB." (**Note**: this section will need to be rewritten to allow traffic to all three containers.) Select your load balancer by name. Set your port to 443 (HTTPS) and select the target group you created earlier.
+Click "Configure ESB." (**Note**: this section will need to be rewritten to allow traffic to all three containers.) Select your load balancer by name. Set your port to 443 (HTTPS) and select the target group you created earlier. Create the service.
+
+## Step 7: Map Your Domain to Route 53
+
+Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
+ 
+If everything works correctly, you should now be able to navigate to your new domain.
+
+
 
 ## Update History
 * 5-Jan-2017 - Initial document
