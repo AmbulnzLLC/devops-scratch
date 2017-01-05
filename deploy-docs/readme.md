@@ -56,7 +56,7 @@ want to create (current naming standard is jsapps-sandbox-*jiraticketnumber*.)
 
 Once that's done, execute the following line:
 
-```ecs-cli up --verbose --keypair devops-containers --capability-iam --security-group sg-f3b8718b --vpc vpc-087ecb6f --subnets subnet-89a04cc0, subnet-25a16b42 --size 1 --instance-type m4.large ```
+```ecs-cli up  --size 1 --instance-type m4.large --verbose --keypair devops-containers --capability-iam --security-group sg-f3b8718b --vpc vpc-087ecb6f --subnets subnet-89a04cc0, subnet-25a16b42```
 
 (If you don't have the *.pem key for devops-containers, you'll need to generate and 
 use
@@ -98,4 +98,3 @@ and updating it to have a task count of zero. Once the service is stopped, you c
 
 ## Update History
 * 5-Jan-2017 - Initial document
-
