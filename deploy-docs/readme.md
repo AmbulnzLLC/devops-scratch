@@ -58,8 +58,30 @@ Once that's done, execute the following line:
 
 ```ecs-cli up --verbose --keypair devops-containers --capability-iam --security-group sg-f3b8718b --vpc vpc-087ecb6f --subnets subnet-89a04cc0, subnet-25a16b42 --size 1 --instance-type m4.large ```
 
+(If you don't have the *.pem key for devops-containers, you'll need to generate and 
+use
+another key with Amazon's IAM service or you won't be able to ssh into your container hosts later.)
+
 **A Note on IDs**: If you're creating a new environment, it's important that your security
-group exists in the same VPC as your container hosts. Also, the subnet IDs are unique to the VPC you choose.
+group exists in the same VPC as your container hosts. Also, the subnet IDs are unique to the VPC you choose. Select vpc-087ecb6f and add both subnets.
+
+## Step 5: Create a Load Balancer
+
+Navigate to the [AWS EC2 control panel](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2), navigate to load balancers, and create a load balancer.
+On the first screen of the wizard, select "Application Load Balancer."
+
+Whatever you name your load balancer, make a note of the name for later. Make sure you have HTTP and HTTPS listeners.
+Leave the defaults under "Configure Security Settings."
+
+Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. ECS will register them for us.
+
+## Step 6: Start Your Service
+
+Once steps 2-4 are completed successfully, navigate to the [ECR Container Cluster page](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
+
+The task definition is the highest tagged number of ecs-compose-JSApps (currently ecs-compose-JSApps:8.) Set the number of tasks to 1 and make a note of the name you give the service.
+
+Click "Configure ESB." (**Note**: this section will need to be rewritten to allow traffic to all three containers.) Select your load balancer by name. Set your port to 443 (HTTPS) and select the target group you created earlier.
 
 ## Update History
 * 5-Jan-2017 - Initial document
