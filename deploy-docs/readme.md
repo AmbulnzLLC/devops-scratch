@@ -28,6 +28,10 @@ There is a build project set up in [Amazon Code Build](https://us-west-2.console
 you just pushed, start the build process. This will create the containers needed to run the service sandbox and store them in the [Amazon Elastic Container Registry](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
 The build process can take up to 20-30 minutes.
 
+## Step 3: Convert Docker Compose File to ECS Task
+
+If any changes have been make to docker-compose-sandbox.yaml in the JSApps repository since the last deployment,  
+
 ## Update History
 * 5-Jan-2017 - Initial document
 
