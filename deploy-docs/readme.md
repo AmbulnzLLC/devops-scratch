@@ -43,7 +43,7 @@ The build process can take up to 20-30 minutes.
 If any changes have been make to docker-compose-sandbox.yaml in the JSApps repository since the last deployment, you'll need to create a new task definition in
  ECS. To do so, navigate to the project directory and type:
   
-  ```ecs-cli compose --file=./docker-compose-sandbox.yaml```
+```ecs-cli compose --file docker-compose-sandbox.yaml create```
 
 ## Update History
 * 5-Jan-2017 - Initial document
