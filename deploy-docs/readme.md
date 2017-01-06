@@ -76,10 +76,24 @@ containers. Confirm that their current build occurred at the expected time.
 
 ## Step 3: Convert Docker Compose File to ECS Task
 
-If any changes have been make to docker-compose-sandbox.yaml in the JSApps repository since the last deployment, you'll need to create a new task definition in
- ECS. To do so, navigate to the project directory and type:
-  
+If any changes have been make to docker-compose-sandbox.yaml in the JSApps 
+repository since the last deployment, you'll need to create a new task 
+definition in ECS. 
+
+Before you do so, open [the task definition page for ecscompose-JSApps](
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/taskDefinitions/ecscompose-JSApps/status/ACTIVE) 
+and make a note of the last revision number. Then, navigate to the project 
+directory and type:
+   
 ```ecs-cli compose --file docker-compose-sandbox.yaml create```
+
+**Checkpoint**: Refresh the task definition page. If a new revision has appeared,
+ task was created successfully. If a new revision has appeared, you've created a
+ new task.
+ 
+ If a new revision *doesn't* appear, it may not be an error. The task definition
+ revisions are idempotent are won't be generated unless a newly-pushed version
+ is different from the current version.
 
 ## Step 4: Create ECS Container Cluster
 
