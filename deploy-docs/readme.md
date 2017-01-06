@@ -125,7 +125,12 @@ https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters).
 If the cli glitches, you can determine the success of stack creation by 
 proceeding to step 6.
 
-## Step 5: Create a Load Balancer
+## Step 5: Construct a Load Balancer
+
+TODO: Rewrite this section to explain how to create and attach rules for the
+relay and API servers. Also, health checks should be on port 4300.
+
+Requires rules for both HTTPS and HTTP.
 
 Navigate to the [AWS EC2 control panel](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2), navigate to load balancers, and create a load balancer.
 On the first screen of the wizard, select "Application Load Balancer."
