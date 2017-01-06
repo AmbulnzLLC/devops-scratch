@@ -109,8 +109,21 @@ Once that's done, execute the following line:
 use
 another key with Amazon's IAM service or you won't be able to ssh into your container hosts later.)
 
-**A Note on IDs**: If you're creating a new environment, it's important that your security
-group exists in the same VPC as your container hosts. Also, the subnet IDs are unique to the VPC you choose. Select vpc-087ecb6f and add both subnets.
+In the future, if you're creating a new environment, it's important that your security
+group exists in the same VPC as your container hosts. Also, the subnet IDs are 
+unique to the VPC you choose. Select vpc-087ecb6f and add both subnets.
+
+Bringing the stack up can take several minutes, during which you can start on
+step 5.
+
+**Checkpoint**: With the verbatim flag passed, the command-line tool will report
+back on success most of the time. Sometimes, the cli will hang or loop on creating
+the ECS instance auto-scaling group, but the stack will actually be created correctly.
+
+You can confirm the existence of your cluster on the [ECS clusters page](
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters).
+If the cli glitches, you can determine the success of stack creation by 
+proceeding to step 6.
 
 ## Step 5: Create a Load Balancer
 
@@ -121,6 +134,8 @@ Whatever you name your load balancer, make a note of the name for later. Make su
 Leave the defaults under "Configure Security Settings."
 
 Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. ECS will register them for us.
+
+
 
 ## Step 6: Start Your Service
 
