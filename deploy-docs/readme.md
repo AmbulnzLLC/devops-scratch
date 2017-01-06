@@ -17,18 +17,26 @@ for details.
   
 Additionally, the following should be installed:
 
-* [The AWS command-line tool](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
-* [The Elastic Container Service command-line tool](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
-* [Docker](https://docs.docker.com/docker-for-mac/)
+* [The AWS command-line tool](
+http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+* [The Elastic Container Service command-line tool](
+http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
+* [Docker](
+https://docs.docker.com/docker-for-mac/)
 * An Amazon EC2 keypair registered to Ambulnz
 
-The command-line tools need to be configured with an AWS IAM keypair that has full permissions on EC2, ECS, CodeCommit, CodeBuild, and CloudFormation. (Generally, a full-admin key is recommended.)
+The command-line tools need to be configured with an AWS IAM keypair that has 
+full permissions on EC2, ECS, CodeCommit, CodeBuild, and CloudFormation. 
+(Generally, a full-admin key is recommended.)
 
 ## Step 1: Github to Amazon
 
-When a code branch of the [JSApps repository](https://github.com/AmbulnzLLC/JSApps) on github is ready to be deployed into
-a sandbox environment, it can be pushed to the Amazon CodeCommit service. To do so, you need the Amazon endpoint available as a remote. To add
-the current repository, navigate to the directory where you're tracking JSApps and type:
+When a code branch of the [JSApps repository](
+https://github.com/AmbulnzLLC/JSApps) on github is ready to be deployed into
+a sandbox environment, it can be pushed to the Amazon CodeCommit service. To 
+do so, you need the Amazon endpoint available as a remote. To add
+the current repository, navigate to the directory where you're tracking 
+JSApps and type:
 
 ```git remote add amazon ssh://git-codecommit.us-west-2.amazonaws.com/v1/repos/ambulnz-jsapps```
 
@@ -36,10 +44,17 @@ You can then push your code branch to CodeCommit using the git cli:
 
 ```git push amazon feature/AM-xxx/fixBrokenThing```
 
+**Checkpoint**: You can confirm this code was pushed successfully by navigating
+to [the commits tab of the CodeCommit repo](
+https://us-west-2.console.aws.amazon.com/codecommit/home?region=us-west-2#/repository/ambulnz-jsapps/commits/master),
+selecting the branch you pushed, and confirming that your most recent 
+commits have been added.
+
 ## Step 2: Code to Containers
 
-There is a build project set up in [Amazon Code Build](https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/projects) called js-servicecontainers. Using the branch
-you just pushed, start the build process. This will create the containers needed to run the service sandbox and store them in the [Amazon Elastic Container Registry](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
+There is a build project set up in [Amazon Code Build](
+https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/projects)
+called js-servicecontainers. Using the branch you just pushed, start the build process. This will create the containers needed to run the service sandbox and store them in the [Amazon Elastic Container Registry](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
 The build process can take up to 20-30 minutes. While the build is running, you can continue with steps 3 and 4.
 
 ## Step 3: Convert Docker Compose File to ECS Task
