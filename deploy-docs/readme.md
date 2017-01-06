@@ -54,8 +54,25 @@ commits have been added.
 
 There is a build project set up in [Amazon Code Build](
 https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/projects)
-called js-servicecontainers. Using the branch you just pushed, start the build process. This will create the containers needed to run the service sandbox and store them in the [Amazon Elastic Container Registry](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
-The build process can take up to 20-30 minutes. While the build is running, you can continue with steps 3 and 4.
+called js-servicecontainers. Using the branch you just pushed, start the build 
+process. This will create the containers needed to run the service sandbox and 
+store them in the [Amazon Elastic Container Registry](
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories).
+The build process can take up to 20-30 minutes. While the build is running, you 
+can continue with steps 3 and 4.
+
+**Checkpoint**: To confirm that the build completed without error, navigate to
+[The Build History tab of the js-servicecontainers CodeBuild project](
+https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/builds).
+Your build run should read "Succeeded."
+
+To confirm that the containers were updated and uploaded to the Elastic Container 
+Registry correctly, check on the repos for the [REST server](
+https://us-west-2.console.aws.amazon.com/codebuild/home?region=us-west-2#/builds
+), [relay](
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories/ambulnz-relay#images;tagStatus=ALL),
+and [webrequester](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/repositories/nanolnz-webclient#images;tagStatus=ALL)
+containers. Confirm that their current build occurred at the expected time. 
 
 ## Step 3: Convert Docker Compose File to ECS Task
 
