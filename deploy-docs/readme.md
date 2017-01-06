@@ -2,17 +2,18 @@
 
 ## Overview
 
-This document describes the process required to manually deploy the api, relay, and 
-web requester components of the Ambulnz suite of applications. Environment-specific
-variables refer to the "sandbox" environment.
+This document describes the process required to manually deploy the api, relay, 
+and  web requester components of the Ambulnz suite of applications. 
+Environment-specific variables refer to the "sandbox" environment.
 
 The components are deployed to the AWS (Amazon Web Services) cloud using EC2 
-(Elastic Compute Cloud) instances and the 
-EC2 Container Service (ECS).
+(Elastic Compute Cloud) instances and the EC2 Container Service (ECS).
 
 ## Prerequisites
-The assumption made in this documentation is that the user is working on a MacBook running a reasonably modern Darwin-based OS (MacOS) 
-configured to build and run Ambulnz's suite of node apps. See the main project readme for details.
+The assumption made in this documentation is that the user is working on a 
+MacBook running a reasonably modern Darwin-based OS (MacOS) configured to 
+build and run Ambulnz's suite of node apps. See the main project readme 
+for details.
   
 Additionally, the following should be installed:
 
