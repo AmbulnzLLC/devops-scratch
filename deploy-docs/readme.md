@@ -173,11 +173,19 @@ groups and targets once we start the service.
 
 ## Step 7: Start Your Service
 
-Once steps 2-6 are completed successfully, navigate to the [ECR Container Cluster page](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
+Once steps 2-6 are completed successfully, navigate to the 
+[ECR Container Cluster page](
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
 
-The task definition is the highest tagged number of ecs-compose-JSApps (currently ecs-compose-JSApps:8.) Set the number of tasks to 1 and make a note of the name you give the service.
+The task definition is the highest tagged number of 
+ecs-compose-JSApps (currently ecs-compose-JSApps:10.) 
+Set the number of tasks to 1 and make a note of the name you give the service.
 
-Click "Configure ESB." (**Note**: this section will need to be rewritten to allow traffic to all three containers.) Select your load balancer by name. Set your port to 443 (HTTPS) and select the target group you created earlier. Create the service.
+Click "Configure ESB." (
+**Note**: this section will need to be rewritten to allow traffic 
+to all three containers.) 
+Select your load balancer by name. 
+Set your port to 443 (HTTPS) and select the target group you created earlier. Create the service.
 
 ## Step 8: Map Your Domain to Route 53
 
