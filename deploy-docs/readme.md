@@ -136,7 +136,7 @@ Each load balancer requires eight target groups - one set of four for HTTP and
  one for HTTPS. These will be routes for: 
  
  * the webrequester at /
- * the relay server at /relay
+ * the relay server at /socket.io
  * the REST server at /api
  * an additional entry for the REST server at /catalog (TODO: Correct this.)
 
