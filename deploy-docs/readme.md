@@ -209,6 +209,9 @@ the service is up and running correctly using the following processes:
  the server is running correctly and exposing the ports as expected. If the page fails
  to load, but updates the address protocol to https, the service is running, but
   something else is wrong.
+* **Navigate to the public DNS of your load balancer**: If everything is correctly configured,
+the protocol should automatically switch to https and you should be able to log into the web
+requester from here. (Security errors on https here are correct and normal.)
  
 ## Step 9: Map Your Domain to Route 53
 
