@@ -223,13 +223,15 @@ and login to the web requester using credentials from the sandbox environment.
 ## Coda: Cleaning up assets
 
 When you're done with your installation, you can clear up the 
-expensive assets created by navigating to the service you created 
-in the ECS console and updating it to have a task count of zero. 
-Once the service is stopped, you can delete the ec2 instance and 
-the cluster. This will also delete the CloudFormation stack.
+expensive assets created by doing the following:
+ 
+* update the service you created to have a desired task count of zero.
+* update the auto-scaling group to have 0 minimum, maximum, and desired tasks.
+* once you've confirmed the EC2 instance you created is terminated, delete the ASG.
+* delete the ECS cluster. This will also delete its CloudFormation stack.
 
-For a full clean-up, you can also delete the CloudFormation stack, 
-load balancer, target group, and DNS A record you created 
+For a full clean-up, you can also delete the 
+load balancer, target groups, and DNS A record you created 
 (providing you haven't shared them with other services.)
 
 ## Update History
