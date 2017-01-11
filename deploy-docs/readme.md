@@ -123,19 +123,26 @@ If the cli glitches, you can determine the success of stack creation by
 proceeding to step 6.
 
 ## Step 5: Create Target Groups
+TODO: Rewrite this section to explain how to create and attach rules for the
+relay and API servers. Also, health checks should be on appropriate ports.
+
+Requires rules for both HTTPS and HTTP.
 
 In order for your load balancer to correctly target all three services with both HTTP and HTTPS, it will require a 
 number of target groups. These are created in the [Target Group Console](
 https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#TargetGroups:).
 
+Each load balancer requires eight target groups - one set of four for HTTP and
+ one for HTTPS. These will be routes for: 
+ 
+ * the webrequester at /
+ * the relay server at /relay
+ * the REST server at /api
+ * an additional entry for the REST server at /catalog (TODO: Correct this.)
 
+ 
 
 ## Step 6: Construct a Load Balancer
-
-TODO: Rewrite this section to explain how to create and attach rules for the
-relay and API servers. Also, health checks should be on appropriate ports.
-
-Requires rules for both HTTPS and HTTP.
 
 Navigate to the [AWS EC2 control panel](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2), navigate to load balancers, and create a load balancer.
 On the first screen of the wizard, select "Application Load Balancer"
