@@ -184,8 +184,9 @@ Set the number of tasks to 1 and make a note of the name you give the service.
 Click "Configure ESB." (
 **Note**: this section will need to be rewritten to allow traffic 
 to all three containers.) 
-Select your load balancer by name. 
-Set your port to 443 (HTTPS) and select the target group you created earlier. Create the service.
+Select your load balancer by name. For "select a container," choose
+"webrequester:5600." Set your port to 80 (HTTP) and select the main 
+target group you created earlier. Create the service.
 
 ## Step 8: Map Your Domain to Route 53
 
