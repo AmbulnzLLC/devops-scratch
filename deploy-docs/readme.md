@@ -124,6 +124,12 @@ proceeding to step 6.
 
 ## Step 5: Create Target Groups
 
+In order for your load balancer to correctly target all three services with both HTTP and HTTPS, it will require a 
+number of target groups. These are created in the [Target Group Console](
+https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#TargetGroups:).
+
+
+
 ## Step 6: Construct a Load Balancer
 
 TODO: Rewrite this section to explain how to create and attach rules for the
