@@ -185,7 +185,8 @@ target group.
 
 Once steps 2-7 are completed successfully, navigate to the 
 [ECR Container Cluster page](
-https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
+https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) 
+and find your new cluster. Click Service -> Create.
 
 The task definition is the highest tagged number of 
 ecs-compose-JSApps (currently ecs-compose-JSApps:10.) 
@@ -205,9 +206,10 @@ the service is up and running correctly using the following processes:
 * **TODO**: Check for rest server
 * **Navigate to port 5600 on your host instance**: In a browser, navigate to
  http://<instance-ip-address>:5600. If the front page of the webrequester appears,
- the server is running correctly and exposing the ports as expected.
+ the server is running correctly and exposing the ports as expected. If the page fails
+ to load, but updates the address protocol to https, the service is running, but
+  something else is wrong.
  
-
 ## Step 9: Map Your Domain to Route 53
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
