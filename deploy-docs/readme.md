@@ -195,6 +195,13 @@ Click "Configure ESB." Select your load balancer by name. For "select a containe
 "webrequester:5600." Set your port to 80 (HTTP) and select the main 
 target group you created earlier. Create the service with 1 task.
 
+**Checkpoint**: At this point, you'll be able to check whether or not
+the service is up and running correctly using the following processes:
+
+* **SSH into your EC2 Instance**: Using the pem file you refrerenced in step 4,
+ connect to the EC2 instance created to host your containers, run ```docker ps```,
+ and confirm that the three services are running.
+
 ## Step 9: Map Your Domain to Route 53
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
