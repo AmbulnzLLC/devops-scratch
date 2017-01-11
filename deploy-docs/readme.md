@@ -217,7 +217,8 @@ requester from here. (Security errors on https here are correct and normal.)
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
  
-If everything works correctly, you should now be able to navigate to your new domain.
+If everything works correctly, you should now be able to navigate to your new domain
+and login to the web requester using credentials from the sandbox environment.
 
 ## Coda: Cleaning up assets
 
