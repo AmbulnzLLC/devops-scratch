@@ -176,7 +176,10 @@ once we start the service.
 Once your load balancer is provisioned and created, navigate to the
 [load balancer console](
 https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:)
-and select your new load balancer.
+and select your new load balancer. In the listeners tab, open the
+HTTP listener and add a rule for each HTTP target group you created.
+Do the same for HTTPS. Point he HTTPS default rule to the https-root
+target group.
 
 ## Step 8: Start Your Service
 
