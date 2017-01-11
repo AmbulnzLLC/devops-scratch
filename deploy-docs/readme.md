@@ -168,12 +168,19 @@ ECS will register them for us.
 
 For routing, choose "existing target group" and select the root http
 target grout you created in the previous step. Leave the other fields
-on their defaults. Then, click through to the end. We'll add more target
-groups and targets once we start the service.
+on their defaults. Then, click through to the end. We'll add targets 
+once we start the service.
 
-## Step 7: Start Your Service
+## Step 7: Add Target Groups to Load Balancer
 
-Once steps 2-6 are completed successfully, navigate to the 
+Once your load balancer is provisioned and created, navigate to the
+[load balancer console](
+https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:)
+and select your new load balancer.
+
+## Step 8: Start Your Service
+
+Once steps 2-7 are completed successfully, navigate to the 
 [ECR Container Cluster page](
 https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
 
@@ -186,9 +193,9 @@ Click "Configure ESB." (
 to all three containers.) 
 Select your load balancer by name. For "select a container," choose
 "webrequester:5600." Set your port to 80 (HTTP) and select the main 
-target group you created earlier. Create the service.
+target group you created earlier. Create the service with 1 task.
 
-## Step 8: Map Your Domain to Route 53
+## Step 9: Map Your Domain to Route 53
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
  
