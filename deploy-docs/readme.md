@@ -226,7 +226,7 @@ When you're done with your installation, you can clear up the
 expensive assets created by navigating to the service you created 
 in the ECS console and updating it to have a task count of zero. 
 Once the service is stopped, you can delete the ec2 instance and 
-the cluster.
+the cluster. This will also delete the CloudFormation stack.
 
 For a full clean-up, you can also delete the CloudFormation stack, 
 load balancer, target group, and DNS A record you created 
