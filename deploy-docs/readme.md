@@ -144,6 +144,10 @@ Each target group must be created on the correct vpc (vpc-087...) and
 listen on either port 80 or port 443. Other than the health-check path, the other
 fields can be left on their defaults.
 
+In order to be able to find these later, I name them jiranumber(rev)-protocol-path-tg.
+For example, the root path target group for the sixth revision of the work
+done for ticket AM-1058 is 1058f-http-root-tg. 
+
 TODO: Explain health-check path
 
 ## Step 6: Construct a Load Balancer
