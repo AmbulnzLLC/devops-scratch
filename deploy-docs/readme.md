@@ -205,7 +205,7 @@ the service is up and running correctly using the following processes:
 * **TODO**: Check for relay
 * **TODO**: Check for rest server
 * **Navigate to port 5600 on your host instance**: In a browser, navigate to
- http://<instance-ip-address>:5600. If the front page of the webrequester appears,
+ http://&lt;instance-ip-address&gt;:5600. If the front page of the webrequester appears,
  the server is running correctly and exposing the ports as expected. If the page fails
  to load, but updates the address protocol to https, the service is running, but
   something else is wrong.
@@ -222,10 +222,15 @@ and login to the web requester using credentials from the sandbox environment.
 
 ## Coda: Cleaning up assets
 
-When you're done with your installation, you can clear up the expensive assets created by navigating to the service you created in the ECS console
-and updating it to have a task count of zero. Once the service is stopped, you can delete the cluster, which will also delete the EC2 instances used and the CloudFormation stack.
- 
- For a full clean-up, you can also delete the load balancer, target group, and DNS A record you created (providing you haven't shared them with other services.)
+When you're done with your installation, you can clear up the 
+expensive assets created by navigating to the service you created 
+in the ECS console and updating it to have a task count of zero. 
+Once the service is stopped, you can delete the ec2 instance and 
+the cluster.
+
+For a full clean-up, you can also delete the CloudFormation stack, 
+load balancer, target group, and DNS A record you created 
+(providing you haven't shared them with other services.)
 
 ## Update History
 * 11-Jan-2017 - Update information about load balancer / target groups
