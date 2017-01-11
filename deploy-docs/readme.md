@@ -201,6 +201,12 @@ the service is up and running correctly using the following processes:
 * **SSH into your EC2 Instance**: Using the pem file you refrerenced in step 4,
  connect to the EC2 instance created to host your containers, run ```docker ps```,
  and confirm that the three services are running.
+* **TODO**: Check for relay
+* **TODO**: Check for rest server
+* **Navigate to port 5600 on your host instance**: In a browser, navigate to
+ http://<instance-ip-address>:5600. If the front page of the webrequester appears,
+ the server is running correctly and exposing the ports as expected.
+ 
 
 ## Step 9: Map Your Domain to Route 53
 
