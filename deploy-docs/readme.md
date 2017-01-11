@@ -140,7 +140,9 @@ Each load balancer requires eight target groups - one set of four for HTTP and
  * the REST server at /api
  * an additional entry for the REST server at /catalog (TODO: Correct this.)
 
- 
+Each target group must be created on the correct vpc (vpc-087...) and
+listen on either port 80 or port 443. Other than the path, the other
+fields can be left on their defaults.
 
 ## Step 6: Construct a Load Balancer
 
