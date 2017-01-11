@@ -122,7 +122,9 @@ https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters).
 If the cli glitches, you can determine the success of stack creation by 
 proceeding to step 6.
 
-## Step 5: Construct a Load Balancer
+## Step 5: Create Target Groups
+
+## Step 6: Construct a Load Balancer
 
 TODO: Rewrite this section to explain how to create and attach rules for the
 relay and API servers. Also, health checks should be on appropriate ports.
@@ -142,17 +144,15 @@ Leave the defaults under "Configure Security Settings."
 
 Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. ECS will register them for us.
 
+## Step 7: Start Your Service
 
-
-## Step 6: Start Your Service
-
-Once steps 2-4 are completed successfully, navigate to the [ECR Container Cluster page](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
+Once steps 2-6 are completed successfully, navigate to the [ECR Container Cluster page](https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters) and find your new cluster. Click Service->Create.
 
 The task definition is the highest tagged number of ecs-compose-JSApps (currently ecs-compose-JSApps:8.) Set the number of tasks to 1 and make a note of the name you give the service.
 
 Click "Configure ESB." (**Note**: this section will need to be rewritten to allow traffic to all three containers.) Select your load balancer by name. Set your port to 443 (HTTPS) and select the target group you created earlier. Create the service.
 
-## Step 7: Map Your Domain to Route 53
+## Step 8: Map Your Domain to Route 53
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
  
@@ -166,4 +166,6 @@ and updating it to have a task count of zero. Once the service is stopped, you c
  For a full clean-up, you can also delete the load balancer, target group, and DNS A record you created (providing you haven't shared them with other services.)
 
 ## Update History
+* 11-Jan-2017 - Update information about load balancer / target groups
 * 5-Jan-2017 - Initial document
+
