@@ -168,7 +168,8 @@ ECS will register them for us.
 
 For routing, choose "existing target group" and select the root http
 target grout you created in the previous step. Leave the other fields
-on their defaults.
+on their defaults. Then, click through to the end. We'll add more target
+groups and targets once we start the service.
 
 ## Step 7: Start Your Service
 
