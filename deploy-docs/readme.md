@@ -125,14 +125,20 @@ proceeding to step 6.
 ## Step 5: Construct a Load Balancer
 
 TODO: Rewrite this section to explain how to create and attach rules for the
-relay and API servers. Also, health checks should be on port 4300.
+relay and API servers. Also, health checks should be on appropriate ports.
 
 Requires rules for both HTTPS and HTTP.
 
 Navigate to the [AWS EC2 control panel](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2), navigate to load balancers, and create a load balancer.
-On the first screen of the wizard, select "Application Load Balancer."
+On the first screen of the wizard, select "Application Load Balancer"
+and place the new ALB in the same VPC as you used to set up the ECS cluster. 
+If you've followed these instructions to this point, that will be vpc-087ecb6f.
+Add all three subnets to the availability list.
 
-Whatever you name your load balancer, make a note of the name for later. Make sure you have HTTP and HTTPS listeners.
+Whatever you name your load balancer, make a note of the name for later.
+
+
+Make sure you have HTTP and HTTPS listeners.
 Leave the defaults under "Configure Security Settings."
 
 Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. ECS will register them for us.
