@@ -88,13 +88,10 @@ directory and type:
 ```ecs-cli compose --file docker-compose-sandbox.yaml create```
 
 **Checkpoint**: Refresh the task definition page. If a new revision has appeared,
- task was created successfully. If a new revision has appeared, you've created a
- new task.
+ task was created successfully. If a new revision hasn't appeared, 
+ but no errors occurred, the new task is most likely identical to the
+ old task and no new revision number was added.
  
- If a new revision *doesn't* appear, it may not be an error. The task definition
- revisions are idempotent are won't be generated unless a newly-pushed version
- is different from the current version.
-
 ## Step 4: Create ECS Container Cluster
 
 If you have an existing ecs cluster you'd like to use, you can skip this step. Otherwise,
