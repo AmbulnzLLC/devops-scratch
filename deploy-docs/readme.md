@@ -159,13 +159,13 @@ balancer, make a note of the name for later.
 
 Under "Configure Security Settings," leave the defaults.
 
-Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. 
+Under "configure security groups," select the group called "csg-jsapps-containers."
+Skip registering targets for now. 
 ECS will register them for us.
 
 For routing, choose "existing target group" and select the root http
 target grout you created in the previous step. Leave the other fields
-on their defaults. Then, click through to the end. We'll add targets 
-once we start the service.
+on their defaults. Then, click through to the end.
 
 ## Step 7: Add Target Groups to Load Balancer
 
