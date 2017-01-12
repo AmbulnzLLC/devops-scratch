@@ -164,7 +164,7 @@ Skip registering targets for now.
 ECS will register them for us.
 
 For routing, choose "existing target group" and select the root http
-target grout you created in the previous step. Leave the other fields
+target group you created in the previous step. Leave the other fields
 on their defaults. Then, click through to the end.
 
 ## Step 7: Add Target Groups to Load Balancer
