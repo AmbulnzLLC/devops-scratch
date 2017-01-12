@@ -138,7 +138,8 @@ Each load balancer requires eight target groups - one set of four for HTTP and
 
 Each target group must be created on the correct vpc (vpc-087ecb6f) and
 listen on either port 80 or port 443. The health check is / (root) for the
- webrequester and /health for the relay and REST servers. 
+ webrequester and /health for the other security groups. All health requests
+  should be on the HTTP protocol regardless of the listening protocol.
  The advanced health check settings can be left on their defaults.
 
 In order to be able to find these later, I name them jiranumber(rev)-protocol-path-tg.
