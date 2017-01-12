@@ -157,7 +157,7 @@ Add all three subnets to the availability list.
 Add listeners for both HTTP and HTTPS.  Whatever you name your load 
 balancer, make a note of the name for later. 
 
-Leave the defaults under "Configure Security Settings."
+Under "Configure Security Settings," select both subnets and continue.
 
 Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. 
 ECS will register them for us.
