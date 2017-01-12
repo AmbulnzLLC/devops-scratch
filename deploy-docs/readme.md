@@ -199,8 +199,12 @@ the service is up and running correctly using the following processes:
 * **SSH into your EC2 Instance**: Using the pem file you refrerenced in step 4,
  connect to the EC2 instance created to host your containers, run ```docker ps```,
  and confirm that the three services are running.
-* **TODO**: Check for relay
-* **TODO**: Check for rest server
+* **Request port 5000/health on your host instance**: If your host IP address
+is 35.167.237.93, request GET http://35.167.237.93:5000/health. You should get
+a response including "OK." This is the relay server.
+* **Request port 5100/health on your host instance**: If your host IP address
+is 35.167.237.93, request GET http://35.167.237.93:5100/health. You should get
+a response including "OK." This is the API server.
 * **Navigate to port 5600 on your host instance**: In a browser, navigate to
  http://&lt;instance-ip-address&gt;:5600. If the front page of the webrequester appears,
  the server is running correctly and exposing the ports as expected. If the page fails
