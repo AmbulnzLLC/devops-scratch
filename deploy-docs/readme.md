@@ -154,10 +154,10 @@ and place the new ALB in the same VPC as you used to set up the ECS cluster.
 If you've followed these instructions to this point, that will be vpc-087ecb6f.
 Add all three subnets to the availability list.
 
-Add listeners for both HTTP and HTTPS.  Whatever you name your load 
+Add listeners for both HTTP and HTTPS. and add both subnets.  Whatever you name your load 
 balancer, make a note of the name for later. 
 
-Under "Configure Security Settings," select both subnets and continue.
+Under "Configure Security Settings," leave the defaults.
 
 Under "configure security groups," select the group called "csg-jsapps-containers." Create a new target group for the HTTPS protocol and make a note of the name you give it. Skip registering targets for now. 
 ECS will register them for us.
