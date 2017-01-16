@@ -12,7 +12,7 @@ provider "aws" {
 	region = "us-west-2"	
 }
 
-resource "aws_launch_configuration" "tfexample" {
+resource "aws_launch_configuration" "example" {
 	ami = "ami-b7a114d7"
 	instance_type = "t2.micro"
 	vpc_security_group_ids = ["${aws_security_group.instance.id}"]
@@ -44,7 +44,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_autoscaling_group" "example" {
-  launch_configuration = "${aws_launch_configuration.tfexample.id}"
+  launch_configuration = "${aws_launch_configuration.example.id}"
   availability_zones = "{$var.home_azs}"
 
   load_balancers    = ["${aws_elb.example.name}"]
