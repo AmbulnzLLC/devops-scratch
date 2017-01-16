@@ -1,6 +1,6 @@
 variable "webserver_port" {
-	description: "the port for busybox to listen on"
-	default: 8080
+	description = "the port for busybox to listen on"
+	default = 8080
 }
 
 provider "aws" {
