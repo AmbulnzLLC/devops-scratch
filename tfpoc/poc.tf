@@ -1,3 +1,8 @@
+variable "webserver_port" {
+	description: "the port for busybox to listen on"
+	default: 8080
+}
+
 provider "aws" {
 	region = "us-west-2"	
 }
@@ -10,7 +15,7 @@ resource "aws_instance" "tfexample" {
 	user_data = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
-              nohup busybox httpd -f -p 8080 &
+              nohup busybox httpd -f -p "${var.webserver_port}" &
               EOF
 
   	tags {
@@ -22,8 +27,8 @@ resource "aws_security_group" "instance" {
   name = "terraform-example-instance"
 
   ingress {
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = "${var.webserver_port}"
+    to_port     = "${var.webserver_port}"
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
