@@ -46,7 +46,7 @@ resource "aws_security_group" "instance" {
 
 resource "aws_autoscaling_group" "example" {
   launch_configuration = "${aws_launch_configuration.example.id}"
-  availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  availability_zones = ["${var.home_azs}"]
 
   load_balancers    = ["${aws_elb.example.name}"]
   health_check_type = "ELB"
@@ -81,7 +81,7 @@ resource "aws_security_group" "elb" {
 
 resource "aws_elb" "example" {
   name               = "terraform-asg-example"
-  availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  availability_zones = ["${var.home_azs}"]
   security_groups    = ["${aws_security_group.elb.id}"]
 
   listener {
