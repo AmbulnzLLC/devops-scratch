@@ -7,7 +7,7 @@ provider "aws" {
 	region = "us-west-2"	
 }
 
-resource "aws_instance" "tfexample" {
+resource "aws_launch_configuration" "tfexample" {
 	ami = "ami-b7a114d7"
 	instance_type = "t2.micro"
 	vpc_security_group_ids = ["${aws_security_group.instance.id}"]
@@ -18,22 +18,24 @@ resource "aws_instance" "tfexample" {
               nohup busybox httpd -f -p "${var.webserver_port}" &
               EOF
 
-  	tags {
-    	Name = "terraform-example"
+  	lifecycle {
+  		create_before_destroy = true
   	}
 }
 
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  	name = "terraform-example-instance"
 
-  ingress {
-    from_port   = "${var.webserver_port}"
-    to_port     = "${var.webserver_port}"
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  	ingress {
+    	from_port   = "${var.webserver_port}"
+    	to_port     = "${var.webserver_port}"
+    	protocol    = "tcp"
+    	cidr_blocks = ["0.0.0.0/0"]
+  	}
+
+	lifecycle {
+		create_before_destroy = true
+	}
 }
 
-output "public_ip" {
-	value = "${aws_instance.tfexample.public_ip}"
-}
+
