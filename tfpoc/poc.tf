@@ -51,3 +51,15 @@ resource "aws_autoscaling_group" "example" {
     	propagate_at_launch = true
   	}
 }
+
+resource "aws_elb" "example" {
+  name               = "terraform-asg-example"
+  availability_zones = ["${data.aws_availability_zones.all.names}"]
+
+  listener {
+    lb_port           = 80
+    lb_protocol       = "http"
+    instance_port     = "${var.webserver_port}"
+    instance_protocol = "http"
+  }
+}
