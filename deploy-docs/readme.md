@@ -189,7 +189,7 @@ The task definition is the highest tagged number of
 ecs-compose-JSApps (currently ecs-compose-JSApps:10.) 
 Set the number of tasks to 1 and make a note of the name you give the service.
 
-Click "Configure ESB." Select your load balancer by name. For "select a container," choose
+Click "Configure ELB." Select your load balancer by name. For "select a container," choose
 "webrequester:5600." Set your port to 80 (HTTP) and select the main 
 target group you created earlier. Create the service with 1 task.
 
