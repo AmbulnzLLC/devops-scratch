@@ -1,0 +1,11 @@
+Error applying plan:
+
+1 error(s) occurred:
+
+* aws_autoscaling_group.example: Error creating AutoScaling Group: ValidationError: The availability zone [{$var.home_azs}] is not legal
+	status code: 400, request id: f8f7a494-dc42-11e6-94fa-a1b9d0265db8
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.
