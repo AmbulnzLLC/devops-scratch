@@ -122,13 +122,13 @@ https://us-west-2.console.aws.amazon.com/ecs/home?region=us-west-2#/clusters).
 If the cli glitches, you can determine the success of stack creation by 
 proceeding to step 6.
 
-## Step 5:
+## Step 5: Create HTTP-to-HTTPS redirector.
 
-Create HTTP-to-HTTPS redirecter.
+TODO: Figure out how to do this.
 
 ## Step 5: Create Target Groups
 
-TODO: Rewrite to 
+TODO: Rewrite to only use HTTPS target groups.
 
 In order for your load balancer to correctly target all three services with both HTTP and HTTPS, it will require a 
 number of target groups. These are created in the [Target Group Console](
