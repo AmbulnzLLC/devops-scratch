@@ -90,7 +90,7 @@ resource "aws_elb" "example" {
     unhealthy_threshold = 2
     timeout             = 3
     interval            = 30
-    target              = "HTTP:${var.server_port}/"
+    target              = "HTTP:${var.webserver_port}/"
   }
 }
 
