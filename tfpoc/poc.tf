@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "tfexample" {
-	ami = "ami-1e299d7e"
+	ami = "ami-b7a114d7"
 	instance_type = "t2.micro"
 	vpc_security_group_ids = ["${aws_security_group.instance.id}"]
 
