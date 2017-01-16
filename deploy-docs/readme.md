@@ -154,6 +154,8 @@ done for ticket AM-1058 is 1058f-http-root-tg.
 
 ## Step 6: Construct a Load Balancer
 
+TODO: Load balancing for HTTP and HTTPS separately.
+
 Navigate to the [AWS EC2 control panel](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2), navigate to load balancers, and create a load balancer.
 On the first screen of the wizard, select "Application Load Balancer"
 and place the new ALB in the same VPC as you used to set up the ECS cluster. 
