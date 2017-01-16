@@ -52,9 +52,21 @@ resource "aws_autoscaling_group" "example" {
   	}
 }
 
+resource "aws_security_group" "elb" {
+  name = "terraform-example-elb"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 resource "aws_elb" "example" {
   name               = "terraform-asg-example"
   availability_zones = ["${data.aws_availability_zones.all.names}"]
+  security_groups    = ["${aws_security_group.elb.id}"]
 
   listener {
     lb_port           = 80
