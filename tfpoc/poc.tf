@@ -3,6 +3,11 @@ variable "webserver_port" {
 	default = 8080
 }
 
+variable "home_azs" {
+	description = "Our home availability zones"
+	default = ["us-west-2a", "us-west-2b", "us-west-2c"]
+}
+
 provider "aws" {
 	region = "us-west-2"	
 }
