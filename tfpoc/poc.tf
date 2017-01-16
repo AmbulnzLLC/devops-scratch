@@ -15,7 +15,7 @@ provider "aws" {
 resource "aws_launch_configuration" "example" {
 	image_id = "ami-b7a114d7"
 	instance_type = "t2.micro"
-	vpc_security_group_ids = ["${aws_security_group.instance.id}"]
+	security_groups = ["${aws_security_group.instance.id}"]
 
 	user_data = <<-EOF
               #!/bin/bash
