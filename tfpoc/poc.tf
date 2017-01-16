@@ -93,3 +93,5 @@ resource "aws_elb" "example" {
     target              = "HTTP:${var.server_port}/"
   }
 }
+
+output "elb_dns_name" {  value = "${aws_elb.example.dns_name}"}
