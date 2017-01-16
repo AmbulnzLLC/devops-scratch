@@ -126,7 +126,7 @@ proceeding to step 6.
 
 TODO: Figure out how to do this.
 
-## Step 5: Create Target Groups
+## Step 6: Create Target Groups
 
 TODO: Rewrite to only use HTTPS target groups.
 
@@ -152,7 +152,7 @@ In order to be able to find these later, I name them jiranumber(rev)-protocol-pa
 For example, the root path target group for the sixth revision of the work
 done for ticket AM-1058 is 1058f-http-root-tg. 
 
-## Step 6: Construct a Load Balancer
+## Step 7: Construct a Load Balancer
 
 TODO: Load balancing for HTTP and HTTPS separately.
 
@@ -175,7 +175,7 @@ For routing, choose "existing target group" and select the root http
 target group you created in the previous step. Leave the other fields
 on their defaults. Then, click through to the end.
 
-## Step 7: Add Target Groups to Load Balancer
+## Step 8: Add Target Groups to Load Balancer
 
 Once your load balancer is provisioned and created, navigate to the
 [load balancer console](
@@ -186,7 +186,9 @@ Point he HTTPS default rule to the https-root target group. The relay
 target groups should be on path /socket.io. Catalog and api should be on /catalog
 and /api respectively.
 
-## Step 8: Start Your Service
+## Step 9: Start Your Service
+
+TODO: Use routes with wildcards, not just "/api," but "/api/*"
 
 Once steps 2-7 are completed successfully, navigate to the 
 [ECR Container Cluster page](
@@ -222,7 +224,7 @@ a response including "OK." This is the API server.
 the protocol should automatically switch to https and you should be able to log into the web
 requester from here. (Security errors on https here are correct and normal.)
  
-## Step 9: Map Your Domain to Route 53
+## Step 10: Map Your Domain to Route 53
 
 Login to the [Route 53 control panel for ambulnz-dev.com](https://console.aws.amazon.com/route53/home?region=us-west-2#resource-record-sets:ZQX48K9VKMJTV). Create a new A-Type recordset and make a note of the name. Set alias to true and point the alias to your load balancer.
  
