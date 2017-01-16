@@ -74,4 +74,12 @@ resource "aws_elb" "example" {
     instance_port     = "${var.webserver_port}"
     instance_protocol = "http"
   }
+
+  health_check {
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 3
+    interval            = 30
+    target              = "HTTP:${var.server_port}/"
+  }
 }
