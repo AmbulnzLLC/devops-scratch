@@ -44,3 +44,15 @@ variable "vpc_subnets" {
 variable "cluster_size" {
 	default = 1
 }
+
+variable "container_host_instance_type" {
+	default = "m4.large"
+}
+
+variable "keypair_name" {
+	default = "devops-containers"
+}
+
+variable "cluster_security_group_id" {
+	default = "sg-f3b8718b"
+}
