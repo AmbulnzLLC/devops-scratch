@@ -54,6 +54,9 @@ resource "aws_launch_configuration" "app" {
 	image_id                    = "${data.aws_ami.stable_coreos.id}"
 	iam_instance_profile        = "${aws_iam_instance_profile.app.name}"
 	user_data                   = "${data.template_file.cloud_config.rendered}"	associate_public_ip_address = true
+	lifecycle {
+		create_before_destroy   = ture
+	}
 }
 
 resource "aws_autoscaling_group" "app" {
