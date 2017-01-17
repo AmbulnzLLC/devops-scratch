@@ -53,8 +53,7 @@ resource "aws_launch_configuration" "app" {
 	key_name                    = "${var.keypair_name}"
 	image_id                    = "${data.aws_ami.stable_coreos.id}"
 	iam_instance_profile        = "${aws_iam_instance_profile.app.name}"
-	user_data                   = ""
-	associate_public_ip_address = true
+	user_data                   = "${data.template_file.cloud_config.rendered}"	associate_public_ip_address = true
 }
 
 resource "aws_autoscaling_group" "app" {
@@ -63,5 +62,6 @@ resource "aws_autoscaling_group" "app" {
   min_size             = 1
   max_size             = 1
   desired_capacity     = 1
+  user_data.           = 
   launch_configuration = "${aws_launch_configuration.app.name}"
 }
