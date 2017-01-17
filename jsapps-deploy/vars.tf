@@ -6,11 +6,11 @@ variable "webrequester_port" {
 }
 
 variable "relay_port" {
-	description = "the port for webrequester to listen on"
+	description = "the port for relay server to listen on"
 	default = 5100
 }
 
 variable "api_port" {
-	description = "the port for webrequester to listen on"
+	description = "the port for API server to listen on"
 	default = 5000
 }
