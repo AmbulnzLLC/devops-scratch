@@ -4,6 +4,7 @@ provider "aws" {
 
 resource "aws_launch_configuration" "app" {
 	security_groups = ["${var.cluster_security_group_id}"]
+	key_name = "${var.keypair_name}"
 }
 
 resource "aws_autoscaling_group" "app" {
