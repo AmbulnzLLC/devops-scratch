@@ -79,3 +79,7 @@ resource "aws_autoscaling_group" "app" {
   user_data            = "${data.template_file.cloud_config.rendered}"
   launch_configuration = "${aws_launch_configuration.app.name}"
 }
+
+resource "aws_ecs_cluster" "main" {
+  name = "jsapps-am${var.am_number}${var.cluster_iteration}"
+}
