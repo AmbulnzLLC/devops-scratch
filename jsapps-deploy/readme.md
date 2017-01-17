@@ -23,6 +23,9 @@ These scripts build the following components:
 * Subnets
 * Security Groups for the containers, the container host, and the load balancer
 * ECS Cluster
+* ECS Service
 * EC2 Instance
-
-
+* Application Load Balancer
+* Load Balancer Rules
+* Target Groups
+* Route53 Domain Entry
