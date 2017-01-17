@@ -3,8 +3,12 @@ provider "aws" {
 }
 
 resource "aws_launch_configuration" "app" {
-	security_groups = ["${var.cluster_security_group_id}"]
-	key_name = "${var.keypair_name}"
+	security_groups             = ["${var.cluster_security_group_id}"]
+	key_name                    = "${var.keypair_name}"
+	image_id                    = "${var.ecs_optimized_container_ami_id}"
+	iam_instance_profile        = ""
+	user_data                   = ""
+	associate_public_ip_address = true
 }
 
 resource "aws_autoscaling_group" "app" {
