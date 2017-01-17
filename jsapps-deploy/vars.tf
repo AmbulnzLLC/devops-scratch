@@ -1,14 +1,14 @@
-variable "webrequester.port" {
+variable "webrequester_port" {
 	description = "the port for webrequester to listen on"
 	default = 5600
 }
 
-variable "relay.port" {
+variable "relay_port" {
 	description = "the port for webrequester to listen on"
 	default = 5100
 }
 
-variable "api.port" {
+variable "api_port" {
 	description = "the port for webrequester to listen on"
 	default = 5000
 }
