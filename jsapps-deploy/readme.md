@@ -29,3 +29,8 @@ These scripts build the following components:
 * Load Balancer Rules
 * Target Groups
 * Route53 Domain Entry
+
+## Reference Resources
+
+* [Outerstack's Github](https://github.com/outerstack)
+
