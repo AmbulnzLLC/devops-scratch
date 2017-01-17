@@ -11,5 +11,13 @@ In this iteration, the scripts can be once a developer has:
 * Pushed their code changes to Amazon CodeCommit
 * Built the docker containers for webrequester, relay, and api servers
 * Pushed those containers to Amazon's Elastic Container Registry
+* Created a container task from the docker-compose file
 
 For details on how to complete these prerequisites, see the [working documentation for cloud deployment](https://github.com/AmbulnzLLC/devops-scratch/tree/develop/deploy-docs).
+
+## Components
+
+These scripts build the following components:
+
+* a VPC
+
