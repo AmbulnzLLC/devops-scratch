@@ -62,6 +62,6 @@ resource "aws_autoscaling_group" "app" {
   min_size             = 1
   max_size             = 1
   desired_capacity     = 1
-  user_data.           = 
+  user_data            = "${data.template_file.cloud_config.rendered}"
   launch_configuration = "${aws_launch_configuration.app.name}"
 }
