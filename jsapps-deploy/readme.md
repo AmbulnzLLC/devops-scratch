@@ -19,8 +19,6 @@ For details on how to complete these prerequisites, see the [working documentati
 
 These scripts build the following components:
 
-* Virtual Private Cloud
-* Subnets
 * Security Groups for the containers, the container host, and the load balancer
 * ECS Cluster
 * ECS Service
