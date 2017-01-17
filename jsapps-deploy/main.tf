@@ -23,11 +23,36 @@ data "aws_ami" "stable_coreos" {
   owners = ["595879546273"] # CoreOS
 }
 
+resource "aws_iam_instance_profile" "app" {
+  name  = "tf-ecs-instprofile"
+  roles = ["${aws_iam_role.app_instance.name}"]
+}
+
+resource "aws_iam_role" "app_instance" {
+  name = "tf-ecs-example-instance-role"
+
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+EOF
+}
+
 resource "aws_launch_configuration" "app" {
 	security_groups             = ["${var.cluster_security_group_id}"]
 	key_name                    = "${var.keypair_name}"
 	image_id                    = "${data.aws_ami.stable_coreos.id}"
-	iam_instance_profile        = ""
+	iam_instance_profile        = "${aws_iam_instance_profile.app.name}"
 	user_data                   = ""
 	associate_public_ip_address = true
 }
