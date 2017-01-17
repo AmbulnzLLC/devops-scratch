@@ -14,3 +14,8 @@ variable "api_port" {
 	description = "the port for API server to listen on"
 	default = 5000
 }
+
+variable "node_env" {
+	description = "the node build environment"
+	default = "sandbox"
+}
