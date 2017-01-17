@@ -58,7 +58,7 @@ resource "aws_launch_configuration" "app" {
 
 resource "aws_autoscaling_group" "app" {
   name                 = "am-${var.am_number}${var.cluster_iteration}-${var.node_env}-asg"
-  vpc_zone_identifier  = ["${var.vpc_subnets[0].id}"]
+  vpc_zone_identifier  = ["${var.vpc_subnets[0]}"]
   min_size             = 1
   max_size             = 1
   desired_capacity     = 1
