@@ -19,3 +19,13 @@ variable "node_env" {
 	description = "the node build environment"
 	default = "sandbox"
 }
+
+variable "am_number" {
+	description = "the JIRA task being built for"
+	default = "0000"
+}
+
+variable "cluster_iteration" {
+	description = "the version indicator of this build"
+	default = "a"
+}
