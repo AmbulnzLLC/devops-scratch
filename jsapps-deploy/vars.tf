@@ -56,7 +56,3 @@ variable "keypair_name" {
 variable "cluster_security_group_id" {
 	default = "sg-f3b8718b"
 }
-
-variable "ecs_optimized_container_ami_id" {
-	default = "ami-c7a451a7"
-}
