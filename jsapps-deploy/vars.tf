@@ -29,3 +29,8 @@ variable "cluster_iteration" {
 	description = "the version indicator of this build"
 	default = "a"
 }
+
+variable "vpc_id" {
+	description = "the id of the VPC to build on"
+	default = "vpc-087ecb6f"
+}
