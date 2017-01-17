@@ -2,6 +2,27 @@ provider "aws" {
 	region = "${var.aws_region}"
 }
 
+data "aws_ami" "stable_coreos" {
+  most_recent = true
+
+  filter {
+    name   = "description"
+    values = ["CoreOS stable *"]
+  }
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["595879546273"] # CoreOS
+}
+
 resource "aws_launch_configuration" "app" {
 	security_groups             = ["${var.cluster_security_group_id}"]
 	key_name                    = "${var.keypair_name}"
