@@ -34,3 +34,14 @@ variable "vpc_id" {
 	description = "the id of the VPC to build on"
 	default = "vpc-087ecb6f"
 }
+
+variable "vpc_subnets" {
+	description = "a list of subnets to use for the cluster assets"
+	type = list
+	default = ["subnet-89a04cc0", "subnet-25a16b42
+
+"]
+
+
+
+}
