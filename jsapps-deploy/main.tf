@@ -63,6 +63,7 @@ resource "aws_launch_configuration" "app" {
 	security_groups             = ["${var.cluster_security_group_id}"]
 	key_name                    = "${var.keypair_name}"
 	image_id                    = "${data.aws_ami.stable_coreos.id}"
+  instance_type               = "${var.container_host_instance_type}"
 	iam_instance_profile        = "${aws_iam_instance_profile.app.name}"
 	user_data                   = "${data.template_file.cloud_config.rendered}"	
   associate_public_ip_address = true
