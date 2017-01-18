@@ -24,7 +24,7 @@ data "aws_ami" "stable_coreos" {
 }
 
 data "template_file" "cloud_config" {
-  template = "${file("${path.module}\cloud-config.yml")}"
+  template = "${file("${path.module}\\cloud-config.yml")}"
 
   vars {
     aws_region         = "${var.aws_region}"
