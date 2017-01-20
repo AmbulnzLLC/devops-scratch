@@ -85,4 +85,10 @@ resource "aws_ecs_cluster" "main" {
   name = "jsapps-am${var.am_number}${var.cluster_iteration}"
 }
 
+# Add load-balancer security group
+
+# Add https target groups
+
 # Add load balancer
+
+# Add service
