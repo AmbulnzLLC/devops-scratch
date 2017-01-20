@@ -61,3 +61,8 @@ variable "task_url" {
 	description = "the source of the task containers"
 	default = "ecs-compose-JSApps:latest"
 }
+
+variable "https_certificate_arn" {
+	default = "	
+arn:aws:acm:us-west-2:431240526133:certificate/cb30cdc3-b0e5-4b10-b7cf-3afef12c06e7"
+}
