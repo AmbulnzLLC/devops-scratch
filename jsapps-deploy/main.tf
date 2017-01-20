@@ -119,10 +119,9 @@ data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
 
   vars {
-    image_url        = "ghost:latest"
-    container_name   = "ghost"
-    log_group_region = "${var.aws_region}"
-    log_group_name   = "${aws_cloudwatch_log_group.app.name}"
+    image_url        = "${var.image_url}"
+    container_name   = "webrequester"
+    port_num         = "${var.webrequester_port}"
   }
 }
 
