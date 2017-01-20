@@ -140,9 +140,27 @@ data "template_file" "task_definition" {
   }
 }
 
-resource "aws_ecs_task_definition" "ghost" {
+resource "aws_ecs_task_definition" "jsapps" {
   family                = "jsapps_taskdef"
   container_definitions = "${data.template_file.task_definition.rendered}"
 }
 
 # Add service
+resource "aws_ecs_service" "jsapps" {
+  name            = "jsapps-svc"
+  cluster         = "${aws_ecs_cluster.main.id}"
+  task_definition = "${aws_ecs_task_definition.jsapps.arn}"
+  desired_count   = 1
+  iam_role        = "${aws_iam_role.ecs_service.name}"
+
+  load_balancer {
+    target_group_arn = "${aws_alb_target_group.test.id}"
+    container_name   = "ghost"
+    container_port   = "2368"
+  }
+
+  depends_on = [
+    "aws_iam_role_policy.ecs_service",
+    "aws_alb_listener.front_end",
+  ]
+}
