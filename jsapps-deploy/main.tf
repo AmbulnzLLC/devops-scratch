@@ -189,7 +189,7 @@ resource "aws_alb_listener" "front_end" {
   protocol          = "HTTPS"
 
   default_action {
-    target_group_arn = "${aws_alb_target_group.https-default.id}"
+    target_group_arn = "${aws_alb_target_group.https_default.id}"
     type             = "forward"
   }
 }
@@ -219,7 +219,7 @@ resource "aws_ecs_service" "jsapps" {
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
   load_balancer {
-    target_group_arn = "${aws_alb_target_group.https_root.id}"
+    target_group_arn = "${aws_alb_target_group.https_default.id}"
     container_name   = "webrequester"
     container_port   = "${var.webrequester_port}"
   }
