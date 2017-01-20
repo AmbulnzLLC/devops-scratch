@@ -38,6 +38,4 @@ coreos:
                                      --env=ECS_CLUSTER=$${ECS_CLUSTER} \
                                      --env=ECS_AVAILABLE_LOGGING_DRIVERS='["awslogs"]' \
                                      --log-driver=awslogs \
-                                     --log-opt awslogs-region=${aws_region} \
-                                     --log-opt awslogs-group=${ecs_log_group_name} \
                                      amazon/amazon-ecs-agent:$${ECS_VERSION}
