@@ -131,7 +131,7 @@ resource "aws_alb_target_group" "https-default" {
 # Add load balancer
 resource "aws_alb" "main" {
   name            = "af-${var.am_number}${var.cluster_iteration}-alb"
-  subnets         = ["${aws_subnet.main.*.id}"]
+  subnets         = ["${var.vpc_subnets}"]
   security_groups = ["${aws_security_group.lb_sg.id}"]
 }
 
