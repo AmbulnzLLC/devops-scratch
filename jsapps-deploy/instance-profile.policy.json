@@ -14,18 +14,6 @@
       "Resource": [
         "*"
       ]
-    },
-    {
-      "Sid": "allowLoggingToCloudWatch",
-      "Effect": "Allow",
-      "Action": [
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": [
-        "${app_log_group_arn}",
-        "${ecs_log_group_arn}"
-      ]
     }
   ]
 }
