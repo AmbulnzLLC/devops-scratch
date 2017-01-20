@@ -33,3 +33,4 @@ These scripts build the following components:
 * [Outerstack's Github](https://github.com/outerstack)
 * [Outerstack's ECS Build Example](https://github.com/outerstack/screencast-demo/blob/master/main.tf)
 * [CapGemini's ECS Build Example](https://github.com/Capgemini/terraform-amazon-ecs)
+* [Hashicorp's ECS Build Example](https://github.com/hashicorp/terraform/tree/master/examples/aws-ecs-alb)
