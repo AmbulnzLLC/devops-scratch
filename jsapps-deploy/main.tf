@@ -168,7 +168,7 @@ resource "aws_iam_role_policy" "instance" {
 }
 
 # Add https target groups
-resource "aws_alb_target_group" "https-default" {
+resource "aws_alb_target_group" "https_default" {
   name     = "https-default-tg"
   port     = 443
   protocol = "HTTPS"
@@ -219,9 +219,9 @@ resource "aws_ecs_service" "jsapps" {
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
   load_balancer {
-    target_group_arn = "${aws_alb_target_group.test.id}"
-    container_name   = "ghost"
-    container_port   = "2368"
+    target_group_arn = "${aws_alb_target_group.https_root.id}"
+    container_name   = "webrequester"
+    container_port   = "${var.webrequester_port}"
   }
 
   depends_on = [
