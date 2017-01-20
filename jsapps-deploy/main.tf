@@ -147,7 +147,6 @@ resource "aws_alb_listener" "front_end" {
   }
 }
 
-
 # Add task
 data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
@@ -164,7 +163,6 @@ resource "aws_ecs_task_definition" "jsapps" {
   container_definitions = "${data.template_file.task_definition.rendered}"
 }
 
-/*
 # Add service
 resource "aws_ecs_service" "jsapps" {
   name            = "jsapps-svc"
@@ -184,4 +182,3 @@ resource "aws_ecs_service" "jsapps" {
     "aws_alb_listener.front_end",
   ]
 }
-*/
