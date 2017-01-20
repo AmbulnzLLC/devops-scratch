@@ -56,3 +56,8 @@ variable "keypair_name" {
 variable "cluster_security_group_id" {
 	default = "sg-f3b8718b"
 }
+
+variable "task_url" {
+	description = "the source of the task containers"
+	default = "ecs-compose-JSApps:latest"
+}
