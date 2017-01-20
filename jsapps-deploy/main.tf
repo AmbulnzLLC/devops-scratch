@@ -187,6 +187,7 @@ resource "aws_alb_listener" "front_end" {
   load_balancer_arn = "${aws_alb.main.id}"
   port              = "443"
   protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2015-05"
 
   default_action {
     target_group_arn = "${aws_alb_target_group.https_default.id}"
