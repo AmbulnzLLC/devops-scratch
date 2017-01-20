@@ -119,7 +119,7 @@ data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
 
   vars {
-    image_url        = "${var.image_url}"
+    image_url        = "${var.task_url}"
     container_name   = "webrequester"
     port_num         = "${var.webrequester_port}"
   }
