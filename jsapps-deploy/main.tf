@@ -129,6 +129,11 @@ resource "aws_alb_target_group" "https-default" {
 }
 
 # Add load balancer
+resource "aws_alb" "main" {
+  name            = "tf-example-alb-ecs"
+  subnets         = ["${aws_subnet.main.*.id}"]
+  security_groups = ["${aws_security_group.lb_sg.id}"]
+}
 
 # Add listener
 
