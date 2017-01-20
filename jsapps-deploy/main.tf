@@ -126,6 +126,12 @@ resource "aws_iam_role_policy" "instance" {
 }
 
 # Add https target groups
+resource "aws_alb_target_group" "https-default" {
+  name     = "https-default-tg"
+  port     = 443
+  protocol = "HTTPS"
+  vpc_id   = "${var.vpc_id}"
+}
 
 # Add load balancer
 
