@@ -89,7 +89,7 @@ resource "aws_ecs_cluster" "main" {
 resource "aws_security_group" "lb_sg" {
   description = "controls access to the application ELB"
 
-  vpc_id = "${aws_vpc.main.id}"
+  vpc_id = "${var.vpc_id}"
   name   = "af-${var.am_number}${var.cluster_iteration}-lbsg"
 
   ingress {
