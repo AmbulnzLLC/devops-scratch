@@ -63,6 +63,5 @@ variable "task_url" {
 }
 
 variable "https_certificate_arn" {
-	default = "	
-arn:aws:acm:us-west-2:431240526133:certificate/cb30cdc3-b0e5-4b10-b7cf-3afef12c06e7"
+	default = "arn:aws:acm:us-west-2:431240526133:certificate/cb30cdc3-b0e5-4b10-b7cf-3afef12c06e7"
 }
