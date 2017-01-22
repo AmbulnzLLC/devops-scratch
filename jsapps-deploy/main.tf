@@ -276,7 +276,7 @@ resource "aws_ecs_service" "relay" {
   load_balancer {
     target_group_arn = "${aws_alb_target_group.https_relay.id}"
     container_name   = "relay"
-    container_port   = "${var.relay}"
+    container_port   = "${var.relay_port}"
   }
 
   depends_on = [
