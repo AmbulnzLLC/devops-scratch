@@ -212,8 +212,8 @@ resource "aws_ecs_task_definition" "jsapps" {
   container_definitions = "${data.template_file.task_definition.rendered}"
 }
 
-# Add service
-resource "aws_ecs_service" "jsapps" {
+# Add services
+resource "aws_ecs_service" "webrequester" {
   name            = "jsapps-svc"
   cluster         = "${aws_ecs_cluster.main.id}"
   task_definition = "${aws_ecs_task_definition.jsapps.arn}"
