@@ -214,7 +214,7 @@ resource "aws_ecs_task_definition" "jsapps" {
 
 # Add services
 resource "aws_ecs_service" "webrequester" {
-  name            = "jsapps-svc"
+  name            = "jsapps-svc-wr"
   cluster         = "${aws_ecs_cluster.main.id}"
   task_definition = "${aws_ecs_task_definition.jsapps.arn}"
   desired_count   = 1
@@ -231,5 +231,26 @@ resource "aws_ecs_service" "webrequester" {
     "aws_alb_listener.front_end",
   ]
 }
+
+resource "aws_ecs_service" "restserver" {
+  name            = "jsapps-svc-api"
+  cluster         = "${aws_ecs_cluster.main.id}"
+  task_definition = "${aws_ecs_task_definition.jsapps.arn}"
+  desired_count   = 1
+  iam_role        = "${aws_iam_role.ecs_service.name}"
+
+  load_balancer {
+    target_group_arn = "${aws_alb_target_group.https_default.id}"
+    container_name   = "restserver"
+    container_port   = "${var.api_port}"
+  }
+
+  depends_on = [
+    "aws_iam_role_policy.ecs_service",
+    "aws_alb_listener.front_end",
+  ]
+}
+
+
 
 # Add target group attachment
