@@ -175,6 +175,14 @@ resource "aws_alb_target_group" "https_default" {
   vpc_id   = "${var.vpc_id}"
 }
 
+# Add https target groups
+resource "aws_alb_target_group" "https_api" {
+  name     = "https-default-tg"
+  port     = 443
+  protocol = "HTTPS"
+  vpc_id   = "${var.vpc_id}"
+}
+
 # Add load balancer
 resource "aws_alb" "main" {
   name            = "af-${var.am_number}${var.cluster_iteration}-alb"
@@ -240,7 +248,7 @@ resource "aws_ecs_service" "restserver" {
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
   load_balancer {
-    target_group_arn = "${aws_alb_target_group.https_default.id}"
+    target_group_arn = "${aws_alb_target_group.https_api.id}"
     container_name   = "restserver"
     container_port   = "${var.api_port}"
   }
