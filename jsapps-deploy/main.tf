@@ -189,7 +189,7 @@ resource "aws_alb_target_group" "https_relay" {
   vpc_id   = "${var.vpc_id}"
 }
 
-resource "aws_alb_target_group" "http_rdefault" {
+resource "aws_alb_target_group" "http_default" {
   name     = "http-default-tg"
   port     = 80
   protocol = "HTTP"
@@ -203,7 +203,7 @@ resource "aws_alb" "main" {
   security_groups = ["${aws_security_group.lb_sg.id}"]
 }
 
-# Add listener
+# Add HTTPS listener
 resource "aws_alb_listener" "front_end" {
   load_balancer_arn = "${aws_alb.main.id}"
   port              = "443"
@@ -213,6 +213,18 @@ resource "aws_alb_listener" "front_end" {
 
   default_action {
     target_group_arn = "${aws_alb_target_group.https_default.id}"
+    type             = "forward"
+  }
+}
+
+# Add HTTP listener
+resource "aws_alb_listener" "http_to_redirect" {
+  load_balancer_arn = "${aws_alb.main.id}"
+  port              = "443"
+  protocol          = "HTTPS"
+
+  default_action {
+    target_group_arn = "${aws_alb_target_group.http_default.id}"
     type             = "forward"
   }
 }
