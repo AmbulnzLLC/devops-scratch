@@ -308,7 +308,7 @@ resource "aws_ecs_service" "webrequester" {
 resource "aws_ecs_service" "restserver" {
   name            = "jsapps-svc-api"
   cluster         = "${aws_ecs_cluster.main.id}"
-  task_definition = "${aws_ecs_task_definition.jsapps.arn}"
+  task_definition = "${var.task_arn}"
   desired_count   = 1
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
@@ -327,7 +327,7 @@ resource "aws_ecs_service" "restserver" {
 resource "aws_ecs_service" "relay" {
   name            = "jsapps-svc-relay"
   cluster         = "${aws_ecs_cluster.main.id}"
-  task_definition = "${aws_ecs_task_definition.jsapps.arn}"
+  task_definition = "${var.task_arn}"
   desired_count   = 1
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
