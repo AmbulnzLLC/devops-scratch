@@ -229,7 +229,7 @@ resource "aws_alb_listener_rule" "api" {
 
 resource "aws_alb_listener_rule" "relay" {
   listener_arn = "${aws_alb_listener.front_end.arn}"
-  priority = 100
+  priority = 200
 
   action {
     type = "forward"
