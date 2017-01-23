@@ -289,7 +289,7 @@ resource "aws_ecs_task_definition" "jsapps" {
 resource "aws_ecs_service" "webrequester" {
   name            = "jsapps-svc-wr"
   cluster         = "${aws_ecs_cluster.main.id}"
-  task_definition = "${aws_ecs_task_definition.jsapps.arn}"
+  task_definition = "${var.task_arn}"
   desired_count   = 1
   iam_role        = "${aws_iam_role.ecs_service.name}"
 
