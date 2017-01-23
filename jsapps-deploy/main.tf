@@ -217,8 +217,8 @@ data "template_file" "task_definition" {
 
   vars {
     image_url        = "${var.task_url}"
-    container_name   = "webrequester"
-    port_num         = "${var.webrequester_port}"
+    wr_container_name   = "webrequester"
+    wr_port_num         = "${var.webrequester_port}"
   }
 }
 

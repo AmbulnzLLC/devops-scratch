@@ -4,11 +4,11 @@
     "essential": true,
     "image": "${image_url}",
     "memory": 512,
-    "name": "${container_name}",
+    "name": "${wr_container_name}",
     "portMappings": [
       {
-        "containerPort": ${port_num},
-        "hostPort": ${port_num}
+        "containerPort": ${wr_port_num},
+        "hostPort": ${wr_port_num}
       }
     ]
   }
