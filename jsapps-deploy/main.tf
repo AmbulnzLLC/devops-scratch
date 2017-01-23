@@ -211,6 +211,8 @@ resource "aws_alb_listener" "front_end" {
   }
 }
 
+# Add listener rules for api/relay"
+
 # Add task
 data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
