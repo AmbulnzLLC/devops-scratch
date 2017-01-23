@@ -24,5 +24,18 @@
         "hostPort": ${api_port_num}
       }
     ]
+  },
+  {
+    "cpu": 256,
+    "essential": true,
+    "image": "${image_url}",
+    "memory": 512,
+    "name": "${relay_container_name}",
+    "portMappings": [
+      {
+        "containerPort": ${relay_port_num},
+        "hostPort": ${relay_port_num}
+      }
+    ]
   }
 ]
