@@ -88,7 +88,7 @@ resource "aws_iam_instance_profile" "app" {
 }
 
 resource "aws_iam_role" "app_instance" {
-  name = "tf-ecs-example-instance-role"
+  name = "jsapps-iam-instance-role"
 
   assume_role_policy = <<EOF
 {
