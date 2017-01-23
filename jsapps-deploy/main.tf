@@ -220,8 +220,8 @@ resource "aws_alb_listener" "front_end" {
 # Add HTTP listener
 resource "aws_alb_listener" "http_to_redirect" {
   load_balancer_arn = "${aws_alb.main.id}"
-  port              = "443"
-  protocol          = "HTTPS"
+  port              = "80"
+  protocol          = "HTTP"
 
   default_action {
     target_group_arn = "${aws_alb_target_group.http_default.id}"
