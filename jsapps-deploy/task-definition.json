@@ -11,5 +11,18 @@
         "hostPort": ${wr_port_num}
       }
     ]
+  },
+  {
+    "cpu": 256,
+    "essential": true,
+    "image": "${image_url}",
+    "memory": 512,
+    "name": "${api_container_name}",
+    "portMappings": [
+      {
+        "containerPort": ${api_port_num},
+        "hostPort": ${api_port_num}
+      }
+    ]
   }
 ]
