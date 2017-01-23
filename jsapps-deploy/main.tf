@@ -212,6 +212,20 @@ resource "aws_alb_listener" "front_end" {
 }
 
 # Add listener rules for api/relay"
+resource "aws_alb_listener_rule" "api" {
+  listener_arn = "${aws_alb_listener.front_end.arn}"
+  priority = 100
+
+  action {
+    type = "forward"
+    target_group_arn = "${aws_alb_target_group.https_api.arn}"
+  }
+
+  condition {
+    field = "path-pattern"
+    values = ["/api/*"]
+  }
+}
 
 # Add task
 data "template_file" "task_definition" {
