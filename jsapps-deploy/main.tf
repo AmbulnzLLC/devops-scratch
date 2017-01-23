@@ -189,6 +189,12 @@ resource "aws_alb_target_group" "https_relay" {
   vpc_id   = "${var.vpc_id}"
 }
 
+resource "aws_alb_target_group" "http_rdefault" {
+  name     = "http-default-tg"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = "${var.vpc_id}"
+}
 
 # Add load balancer
 resource "aws_alb" "main" {
