@@ -306,6 +306,7 @@ resource "aws_ecs_service" "webrequester" {
   depends_on = [
     "aws_iam_role_policy.ecs_service",
     "aws_alb_listener.front_end",
+    "aws_autoscaling_group.app"
   ]
 }
 
@@ -325,6 +326,7 @@ resource "aws_ecs_service" "api" {
   depends_on = [
     "aws_iam_role_policy.ecs_service",
     "aws_alb_listener.front_end",
+    "aws_autoscaling_group.app"
   ]
 }
 
@@ -344,6 +346,7 @@ resource "aws_ecs_service" "relay" {
   depends_on = [
     "aws_iam_role_policy.ecs_service",
     "aws_alb_listener.front_end",
+    "aws_autoscaling_group.app"
   ]
 }
 

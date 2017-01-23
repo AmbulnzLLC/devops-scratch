@@ -242,4 +242,3 @@ load balancer, target groups, and DNS A record you created
 * 23-Jan-2017 - Remove HTTP/HTTPS confusion
 * 11-Jan-2017 - Update information about load balancer / target groups
 * 5-Jan-2017 - Initial document
-
