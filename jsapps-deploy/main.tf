@@ -216,13 +216,13 @@ data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
 
   vars {
-    image_url           = "${var.task_url}"
-    wr_container_name   = "webrequester"
-    wr_port_num         = "${var.webrequester_port}"
-    api_container_name  = "restserver"
-    api_port_num        = "${var.api_port}"
+    image_url            = "${var.task_url}"
+    wr_container_name    = "webrequester"
+    wr_port_num          = "${var.webrequester_port}"
+    api_container_name   = "restserver"
+    api_port_num         = "${var.api_port}"
     relay_container_name = "relay"
-    relay_port_num.      = "${var.relay_port}"
+    relay_port_num       = "${var.relay_port}"
   }
 }
 
