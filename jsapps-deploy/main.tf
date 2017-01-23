@@ -268,7 +268,7 @@ data "template_file" "task_definition" {
     image_url            = "${var.task_url}"
     wr_container_name    = "webrequester"
     wr_port_num          = "${var.webrequester_port}"
-    api_container_name   = "restserver"
+    api_container_name   = "api"
     api_port_num         = "${var.api_port}"
     relay_container_name = "relay"
     relay_port_num       = "${var.relay_port}"
@@ -305,7 +305,7 @@ resource "aws_ecs_service" "webrequester" {
   ]
 }
 
-resource "aws_ecs_service" "restserver" {
+resource "aws_ecs_service" "api" {
   name            = "jsapps-svc-api"
   cluster         = "${aws_ecs_cluster.main.id}"
   task_definition = "${var.task_arn}"
@@ -314,7 +314,7 @@ resource "aws_ecs_service" "restserver" {
 
   load_balancer {
     target_group_arn = "${aws_alb_target_group.https_api.id}"
-    container_name   = "restserver"
+    container_name   = "api"
     container_port   = "${var.api_port}"
   }
 
