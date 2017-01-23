@@ -72,7 +72,8 @@ resource "aws_iam_role_policy" "ecs_service" {
         "elasticloadbalancing:DeregisterTargets",
         "elasticloadbalancing:Describe*",
         "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-        "elasticloadbalancing:RegisterTargets"
+        "elasticloadbalancing:RegisterTargets",
+        "ecs:StartTask"
       ],
       "Resource": "*"
     }
