@@ -261,6 +261,9 @@ resource "aws_alb_listener_rule" "relay" {
 }
 
 # Add task
+# NOTE - In the current revision (23-Jan-2017,) this isn't used.
+# Instead, we use the ARN of *-JSApps:11 directly. This is left in
+# because it will be used once we automate task creation (AM-1480/1)
 data "template_file" "task_definition" {
   template = "${file("${path.module}/task-definition.json")}"
 
