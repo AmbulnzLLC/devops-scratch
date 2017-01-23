@@ -1,4 +1,18 @@
 #cloud-config
+write_files:
+  - path: /etc/ssh/sshd_config
+    permissions: 0600
+    owner: root:root
+    content: |
+      # Use most defaults for sshd configuration.
+      UsePrivilegeSeparation sandbox
+      Subsystem sftp internal-sftp
+
+      PermitRootLogin yes
+      AllowUsers core
+      PasswordAuthentication no
+      ChallengeResponseAuthentication no
+
 coreos:
   units:
    - name: update-engine.service
