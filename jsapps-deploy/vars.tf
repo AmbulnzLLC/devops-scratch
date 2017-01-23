@@ -68,6 +68,11 @@ variable "task_url" {
 	default = "ecs-compose-JSApps:latest"
 }
 
+variable "task_arn" {
+	description = "the direct arn of the existing task"
+	default = "arn:aws:ecs:us-west-2:431240526133:task-definition/ecscompose-JSApps:latest"
+}
+
 variable "https_certificate_arn" {
 	default = "arn:aws:acm:us-west-2:431240526133:certificate/cb30cdc3-b0e5-4b10-b7cf-3afef12c06e7"
 }
