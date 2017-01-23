@@ -41,6 +41,12 @@ variable "vpc_subnets" {
 	default = ["subnet-89a04cc0", "subnet-25a16b42"]
 }
 
+variable "vpc_azs" {
+	description = "a list of availability zones for the VPC"
+	type        = "list"
+	default.    = ["us-west-2a", "us-west-2b"]
+}
+
 variable "cluster_size" {
 	default = 1
 }
