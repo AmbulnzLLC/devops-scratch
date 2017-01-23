@@ -44,7 +44,7 @@ variable "vpc_subnets" {
 variable "vpc_azs" {
 	description = "a list of availability zones for the VPC"
 	type        = "list"
-	default.    = ["us-west-2a", "us-west-2b"]
+	default     = ["us-west-2a", "us-west-2b"]
 }
 
 variable "cluster_size" {
