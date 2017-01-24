@@ -122,7 +122,7 @@ resource "aws_launch_configuration" "app" {
 
 resource "aws_placement_group" "app" {
   name     = "am-${var.am_number}${var.cluster_iteration}-placegroup"
-  strategy = "cluster"S
+  strategy = "cluster"
 }
 
 resource "aws_autoscaling_group" "app" {
