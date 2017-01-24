@@ -38,7 +38,7 @@ variable "vpc_id" {
 variable "vpc_subnets" {
 	description = "a list of subnets to use for the cluster assets"
 	type = "list"
-	default = ["subnet-25a16b42"]
+	default = ["subnet-25a16b42", "subnet-89a04cc0"]
 }
 
 variable "vpc_azs" {
