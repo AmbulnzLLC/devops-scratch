@@ -131,7 +131,7 @@ resource "aws_autoscaling_group" "app" {
   min_size              = 1
   max_size              = 1
   desired_capacity      = 1
-  placement_group.      = "${aws_placement_group.app.id}"
+  placement_group       = "${aws_placement_group.app.id}"
   launch_configuration  = "${aws_launch_configuration.app.name}"
   wait_for_elb_capacity = true
 }
