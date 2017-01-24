@@ -135,6 +135,9 @@ resource "aws_autoscaling_group" "app" {
   launch_configuration  = "${aws_launch_configuration.app.name}"
   wait_for_elb_capacity = true
   /* load_balancers        = ["${aws_alb.main.id}"] */
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_ecs_cluster" "main" {
