@@ -127,7 +127,7 @@ resource "aws_placement_group" "app" {
 
 resource "aws_autoscaling_group" "app" {
   name                  = "am-${var.am_number}${var.cluster_iteration}-${var.node_env}-asg"
-  vpc_zone_identifier   = ["${var.vpc_subnets[0]}"]
+  availability_zones    = ["${var.vpc_azs}"]
   min_size              = 1
   max_size              = 1
   desired_capacity      = 1
