@@ -294,10 +294,12 @@ resource "aws_ecs_task_definition" "jsapps" {
   family                = "jsapps_taskdef"
   container_definitions = "${data.template_file.task_definition.rendered}"
 
+  /*
   placement_constraints {
     type        = "memberOf"
     expression  = "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]"
   }
+  */
 }
 
 # Add services
