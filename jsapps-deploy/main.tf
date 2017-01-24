@@ -309,7 +309,7 @@ resource "aws_ecs_service" "webrequester" {
     "aws_autoscaling_group.app"
   ]
 }
-/*
+
 resource "aws_ecs_service" "api" {
   name            = "jsapps-svc-api"
   cluster         = "${aws_ecs_cluster.main.id}"
@@ -349,4 +349,3 @@ resource "aws_ecs_service" "relay" {
     "aws_autoscaling_group.app"
   ]
 }
-*/
