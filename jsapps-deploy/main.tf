@@ -134,7 +134,7 @@ resource "aws_autoscaling_group" "app" {
   placement_group       = "${aws_placement_group.app.id}"
   launch_configuration  = "${aws_launch_configuration.app.name}"
   wait_for_elb_capacity = true
-  /* load_balancers        = ["${aws_alb.main.id}"] */
+  /* load_balancers        = ["${aws_alb.main.name}"] */
   lifecycle {
     create_before_destroy = true
   }
