@@ -211,11 +211,6 @@ resource "aws_alb" "main" {
   security_groups = ["${aws_security_group.lb_sg.id}"]
 }
 
-resource "aws_autoscaling_attachment" "app" {
-  autoscaling_group_name = "${aws_autoscaling_group.app.id}"
-  elb                    = "${aws_alb.main.id}"
-}
-
 # Add HTTPS listener
 resource "aws_alb_listener" "front_end" {
   load_balancer_arn = "${aws_alb.main.id}"
