@@ -1,0 +1,26 @@
+{
+  "name": "watcherbot",
+  "version": "1.0.0",
+  "description": "A bot for watching github actions and kicking off appropriate build actions.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmbulnzLLC/devops-scratch.git"
+  },
+  "keywords": [
+    "automation",
+    "bot",
+    "aws",
+    "codebuild",
+    "sns"
+  ],
+  "author": "Jake Bladt <jake@jakebladt.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
+  },
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme"
+}
