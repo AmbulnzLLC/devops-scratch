@@ -3,7 +3,7 @@ provider "aws" {
     region = "us-west-2"
 }
 
-variable "buildserver_name" {
+variable "server_name" {
   description = "A name for the build server"
   default = "container-host"
 }
@@ -22,7 +22,7 @@ resource "aws_instance" "dopserver" {
     instance_type = "m4.large"
     key_name = "${var.key_name}"
     tags {
-        Name = "${var.buildserver_name}"
+        Name = "${var.server_name}"
     }
 }
 
