@@ -1,3 +1,8 @@
+
+provider "aws" {
+    region = "us-west-2"
+}
+
 variable "buildserver_name" {
   description = "A name for the build server"
   default = "devops-buildserver"
@@ -8,25 +13,12 @@ variable "key_name" {
   default = "unsafe"
 }
 
-provider "aws" {
-    region = "us-west-2"
-}
-
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  filter {
-    name = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = ["hvm"]
-  }
-  owners = ["099720109477"] # Canonical
+variable "ami_id" {
+  default = "ami-10823b70"
 }
 
 resource "aws_instance" "dopserver" {
-    ami = "${data.aws_ami.ubuntu.id}"
+    ami = "${var.ami_id}"
     instance_type = "m4.large"
     key_name = "${var.key_name}"
     tags {
