@@ -1,0 +1,26 @@
+{
+  "name": "build-server",
+  "version": "1.0.0",
+  "description": "Ambulnz Build Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Testing is for facists\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmbulnzLLC/devops-scratch"
+  },
+  "author": "Anthony Capone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
+  },
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch/build-server#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "github": "^8.1.1",
+    "mkdir-recursive": "^0.2.3"
+  }
+}
