@@ -1,11 +1,11 @@
 variable "buildserver_name" {
-  description: "A name for the build server"
-  default: "devops-buildserver"
+  description = "A name for the build server"
+  default = "devops-buildserver"
 }
 
 variable "key_name" {
-  description: "The AWS-managed name of the key needed to SSH into this instance"
-  default: "unsafe"
+  description = "The AWS-managed name of the key needed to SSH into this instance"
+  default = "unsafe"
 }
 
 provider "aws" {
