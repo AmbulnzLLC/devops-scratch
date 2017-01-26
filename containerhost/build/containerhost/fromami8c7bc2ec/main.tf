@@ -29,3 +29,7 @@ resource "aws_instance" "dopserver" {
 output "instance_id" {
   value = "${aws_instance.dopserver.id}"
 }
+
+output "instance_ip" {
+  value = "${aws_instance.dopserver.public_ip}"
+}
