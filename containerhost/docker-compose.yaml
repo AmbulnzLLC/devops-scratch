@@ -1,7 +1,7 @@
 version: '2'
 services:
   relay:
-    image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-relay:latest
+    image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-relay:replacethis
     environment:
       NODE_ENV: sandbox
       REDIS_URL: redis://sandbox-001.q96zp5.0001.usw2.cache.amazonaws.com:6379
@@ -10,7 +10,7 @@ services:
     ports:
      - "5100:5100"
   api:
-      image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-restserver:latest
+      image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-restserver:replacethis
       environment:
         NODE_ENV: sandbox
         REDIS_URL: redis://sandbox-001.q96zp5.0001.usw2.cache.amazonaws.com:6379
@@ -22,7 +22,7 @@ services:
       links:
        - relay
   webrequester:
-    image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-webclient:latest
+    image: 431240526133.dkr.ecr.us-west-2.amazonaws.com/ambulnz-webclient:replacethis
     environment:
       NODE_ENV: sandbox
       BACKEND_ENDPOINT: http://api:5000
