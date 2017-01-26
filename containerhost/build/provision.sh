@@ -6,6 +6,15 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get install -y nodejs
 
 # docker
-apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+apt-get install -y curl \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+apt-get install -y apt-transport-https \
+                       ca-certificates
+curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+add-apt-repository \
+       "deb https://apt.dockerproject.org/repo/ \
+       ubuntu-$(lsb_release -cs) \
+       main"
 apt-get update
+
