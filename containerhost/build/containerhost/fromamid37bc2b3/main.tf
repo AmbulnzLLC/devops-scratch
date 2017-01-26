@@ -14,7 +14,7 @@ variable "key_name" {
 }
 
 variable "ami_id" {
-  default = "ami-8c7bc2ec"
+  default = "ami-d37bc2b3"
 }
 
 resource "aws_instance" "dopserver" {
@@ -31,5 +31,5 @@ output "instance_id" {
 }
 
 output "instance_ip" {
-  value = "${aws_instance.dopserver.public_ip}"
+  value = "${aws_instance.dopserver.public_ipy}"
 }
