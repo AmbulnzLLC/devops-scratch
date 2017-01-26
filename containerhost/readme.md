@@ -15,8 +15,12 @@ The devops server should do the following:
 
 ## Container Host
 
-* 
+* Execute call home to devops server, getting container build version
+* Replace token in docker-compose with container build version
+* Spin up docker instances
 
 ## AWS Artifacts Required
 
 ## Future Work Required
+
+
