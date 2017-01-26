@@ -26,4 +26,6 @@ The devops server should do the following:
 
 ## Future Work Required
 
-
+* HTTPS
+* Autoscaling Group
+* Load Balancer
