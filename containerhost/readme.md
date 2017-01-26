@@ -21,6 +21,9 @@ The devops server should do the following:
 
 ## AWS Artifacts Required
 
+* IAM role for devops server
+* IAM role for container host
+
 ## Future Work Required
 
 
