@@ -17,4 +17,4 @@ add-apt-repository \
        ubuntu-$(lsb_release -cs) \
        main"
 apt-get update
-
+apt-get -y install docker-engine=1.12.0-0~trusty
