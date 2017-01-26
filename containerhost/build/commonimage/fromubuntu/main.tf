@@ -1,6 +1,6 @@
 variable "buildserver_name" {
   description = "A name for the build server"
-  default = "devops-buildserver"
+  default = "devops-tools"
 }
 
 variable "key_name" {
