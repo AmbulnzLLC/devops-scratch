@@ -27,3 +27,5 @@ chmod +x /usr/local/bin/docker-compose
 apt-get install unzip
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 
+# git
+apt-get install git
