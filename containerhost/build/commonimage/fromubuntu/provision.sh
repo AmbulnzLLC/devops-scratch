@@ -3,11 +3,12 @@
 # node
 apt-get update
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get install -y nodejs
+apt-get install -y nodejs moreutils build-essential
 
 # docker
 apt-get install -y curl \
     linux-image-extra-$(uname -r) \
+    
     linux-image-extra-virtual
 apt-get install -y apt-transport-https \
                        ca-certificates
