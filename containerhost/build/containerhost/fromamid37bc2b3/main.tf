@@ -22,7 +22,7 @@ variable "role_name" {
   default = "devops-containerhost"
 }
 
-resource "aws_instance_profile" "host" {
+resource "aws_iam_instance_profile" "host" {
   roles = ["${var.role_name}"]
 }
 
