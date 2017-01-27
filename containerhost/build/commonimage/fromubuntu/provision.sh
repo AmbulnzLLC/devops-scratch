@@ -24,6 +24,7 @@ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compo
 chmod +x /usr/local/bin/docker-compose
 
 # aws cli
+export PATH=~/bin:$PATH
 apt-get install unzip
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
