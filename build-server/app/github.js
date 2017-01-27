@@ -3,7 +3,8 @@ const fx = require('mkdir-recursive')
 const exec = require('child_process').exec
 const githubApi = require('github')
 const github = new githubApi()
-const owner = process.env.GITHUB_USERNAME
+const owner = 'hutchiep190'
+const AWS = require('./AWS')
 
 github.authenticate({
   type: 'token',
@@ -76,20 +77,23 @@ function ensureCheckedOut(repo, branch, dir, callback) {
   })
 }
 
-function mergeBranchInDirectory(dir, branch) {
+function mergeBranchInDirectory(dir, branch, callback) {
   exec(`cd ${dir}; git merge origin/${branch} --no-ff -m 'avoid prompt'`, function(error, stdout, stderr) {
     if (error) {
       return console.log('Error merging branch', error)
     }
+    if (typeof callback === 'function') {
+      callback()
+    }
   })
 }
 
-function setupRepository(repo, headBranch, baseBranch) {
+function setupRepository(repo, headBranch, baseBranch, callback) {
   const headDir = dirFor(repo, headBranch)
   const baseDir = dirFor(repo, baseBranch)
   ensureCheckedOut(repo, baseBranch, baseDir, () => {
     ensureCheckedOut(repo, headBranch, headDir, () => {
-      mergeBranchInDirectory(headDir, baseBranch)
+      mergeBranchInDirectory(headDir, baseBranch, callback)
     })
   })
 }
@@ -107,7 +111,9 @@ function handleAction(repo, number, action) {
     const baseBranch = pullRequest.base.ref
     const headBranch = pullRequest.head.ref
     console.log(`Handling pull request from branch ${headBranch} to branch ${baseBranch}`)
-    setupRepository(repo, headBranch, baseBranch)
+    setupRepository(repo, headBranch, baseBranch, () => {
+      AWS.startInstance()
+    })
   })
 }
 
