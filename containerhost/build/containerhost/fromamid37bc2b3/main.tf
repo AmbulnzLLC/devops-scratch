@@ -17,6 +17,15 @@ variable "ami_id" {
   default = "ami-d37bc2b3"
 }
 
+variable "role_name" {
+  description = "The IAM role to attach to the host"
+  default = "devops-containerhost"
+}
+
+resource "aws_instance_profile" "host" {
+  roles = ["${var.role_name}"]
+}
+
 resource "aws_instance" "dopserver" {
     ami = "${var.ami_id}"
     instance_type = "m4.large"
