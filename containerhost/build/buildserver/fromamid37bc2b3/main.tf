@@ -4,7 +4,7 @@ provider "aws" {
 
 variable "server_name" {
   description = "A name for the build server"
-  default = "container-host"
+  default = "build-server"
 }
 
 variable "key_name" {
