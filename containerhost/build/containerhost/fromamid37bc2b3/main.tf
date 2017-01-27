@@ -29,6 +29,7 @@ resource "aws_instance_profile" "host" {
 resource "aws_instance" "dopserver" {
     ami = "${var.ami_id}"
     instance_type = "m4.large"
+    iam_instance_profile = "${aws_instance_profile.host.name}"
     key_name = "${var.key_name}"
     tags {
         Name = "${var.server_name}"
