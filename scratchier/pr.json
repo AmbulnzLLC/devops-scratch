@@ -1,108 +1,35 @@
 {  
-   "ref":"refs/heads/master",
-   "before":"1b50d4fa2df83d0165bd03533ac5467afaec19b5",
-   "after":"f296fb454362f97432e2f1043b52e8927d4270d6",
-   "created":false,
-   "deleted":false,
-   "forced":false,
-   "base_ref":null,
-   "compare":"https://github.com/AmbulnzLLC/automation-devops-tools/compare/1b50d4fa2df8...f296fb454362",
-   "commits":[  
-      {  
-         "id":"d01546311d06eaa207b47d580f1b34bb24274836",
-         "tree_id":"15216ca09071d957c24a85be76c805623eb4bab3",
-         "distinct":false,
-         "message":"keep 0",
-         "timestamp":"2017-01-30T12:29:33-05:00",
-         "url":"https://github.com/AmbulnzLLC/automation-devops-tools/commit/d01546311d06eaa207b47d580f1b34bb24274836",
-         "author":{  
-            "name":"Jake Bladt",
-            "email":"jake@ambulnz.com",
-            "username":"jake-bladt"
-         },
-         "committer":{  
-            "name":"Jake Bladt",
-            "email":"jake@ambulnz.com",
-            "username":"jake-bladt"
-         },
-         "added":[  
-            "0.keep"
-         ],
-         "removed":[  
-
-         ],
-         "modified":[  
-
-         ]
-      },
-      {  
-         "id":"f296fb454362f97432e2f1043b52e8927d4270d6",
-         "tree_id":"15216ca09071d957c24a85be76c805623eb4bab3",
-         "distinct":true,
-         "message":"Merge pull request #1 from AmbulnzLLC/keep/0\n\nkeep 0",
-         "timestamp":"2017-01-30T12:30:34-05:00",
-         "url":"https://github.com/AmbulnzLLC/automation-devops-tools/commit/f296fb454362f97432e2f1043b52e8927d4270d6",
-         "author":{  
-            "name":"Jake Bladt",
-            "email":"jake@jakebladt.com",
-            "username":"jake-bladt"
-         },
-         "committer":{  
-            "name":"GitHub",
-            "email":"noreply@github.com",
-            "username":"web-flow"
-         },
-         "added":[  
-            "0.keep"
-         ],
-         "removed":[  
-
-         ],
-         "modified":[  
-
-         ]
-      }
-   ],
-   "head_commit":{  
-      "id":"f296fb454362f97432e2f1043b52e8927d4270d6",
-      "tree_id":"15216ca09071d957c24a85be76c805623eb4bab3",
-      "distinct":true,
-      "message":"Merge pull request #1 from AmbulnzLLC/keep/0\n\nkeep 0",
-      "timestamp":"2017-01-30T12:30:34-05:00",
-      "url":"https://github.com/AmbulnzLLC/automation-devops-tools/commit/f296fb454362f97432e2f1043b52e8927d4270d6",
-      "author":{  
-         "name":"Jake Bladt",
-         "email":"jake@jakebladt.com",
-         "username":"jake-bladt"
-      },
-      "committer":{  
-         "name":"GitHub",
-         "email":"noreply@github.com",
-         "username":"web-flow"
-      },
-      "added":[  
-         "0.keep"
-      ],
-      "removed":[  
-
-      ],
-      "modified":[  
-
-      ]
-   },
+   "ref":"keep/1",
+   "ref_type":"branch",
+   "pusher_type":"user",
    "repository":{  
       "id":80366909,
       "name":"automation-devops-tools",
       "full_name":"AmbulnzLLC/automation-devops-tools",
       "owner":{  
-         "name":"AmbulnzLLC",
-         "email":""
+         "login":"AmbulnzLLC",
+         "id":15699409,
+         "avatar_url":"https://avatars.githubusercontent.com/u/15699409?v=3",
+         "gravatar_id":"",
+         "url":"https://api.github.com/users/AmbulnzLLC",
+         "html_url":"https://github.com/AmbulnzLLC",
+         "followers_url":"https://api.github.com/users/AmbulnzLLC/followers",
+         "following_url":"https://api.github.com/users/AmbulnzLLC/following{/other_user}",
+         "gists_url":"https://api.github.com/users/AmbulnzLLC/gists{/gist_id}",
+         "starred_url":"https://api.github.com/users/AmbulnzLLC/starred{/owner}{/repo}",
+         "subscriptions_url":"https://api.github.com/users/AmbulnzLLC/subscriptions",
+         "organizations_url":"https://api.github.com/users/AmbulnzLLC/orgs",
+         "repos_url":"https://api.github.com/users/AmbulnzLLC/repos",
+         "events_url":"https://api.github.com/users/AmbulnzLLC/events{/privacy}",
+         "received_events_url":"https://api.github.com/users/AmbulnzLLC/received_events",
+         "type":"Organization",
+         "site_admin":false
       },
       "private":true,
       "html_url":"https://github.com/AmbulnzLLC/automation-devops-tools",
       "description":null,
       "fork":false,
-      "url":"https://github.com/AmbulnzLLC/automation-devops-tools",
+      "url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools",
       "forks_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/forks",
       "keys_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/keys{/key_id}",
       "collaborators_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/collaborators{/collaborator}",
@@ -139,9 +66,9 @@
       "labels_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/labels{/name}",
       "releases_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/releases{/id}",
       "deployments_url":"https://api.github.com/repos/AmbulnzLLC/automation-devops-tools/deployments",
-      "created_at":1485718056,
+      "created_at":"2017-01-29T19:27:36Z",
       "updated_at":"2017-01-29T23:44:06Z",
-      "pushed_at":1485797434,
+      "pushed_at":"2017-01-30T17:45:45Z",
       "git_url":"git://github.com/AmbulnzLLC/automation-devops-tools.git",
       "ssh_url":"git@github.com:AmbulnzLLC/automation-devops-tools.git",
       "clone_url":"https://github.com/AmbulnzLLC/automation-devops-tools.git",
@@ -161,14 +88,7 @@
       "forks":0,
       "open_issues":0,
       "watchers":0,
-      "default_branch":"master",
-      "stargazers":0,
-      "master_branch":"master",
-      "organization":"AmbulnzLLC"
-   },
-   "pusher":{  
-      "name":"jake-bladt",
-      "email":"jake@jakebladt.com"
+      "default_branch":"master"
    },
    "organization":{  
       "login":"AmbulnzLLC",
