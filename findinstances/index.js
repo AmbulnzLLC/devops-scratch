@@ -15,7 +15,7 @@ function getInstancesWithTags(repo, pr, callback) {
       [])
     var taggedInstances = allInstances.filter(i => {
       var repoTag = i.Tags.filter(t => t.Key === 'Github Repo' && t.Value === repo) 
-      var prTag =   i.Tags.filter(t => t.Key === 'Pull Request' && t.Value === pr)
+      var prTag =   i.Tags.filter(t => t.Key === 'Pull Request' && t.Value === `PR${pr}`)
       return repoTag.length > 0 && prTag.length > 0
     })
     callback(taggedInstances)
