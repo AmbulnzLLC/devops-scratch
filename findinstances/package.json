@@ -1,0 +1,22 @@
+{
+  "name": "findinstances",
+  "version": "1.0.0",
+  "description": "find aws instances by tags",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'no tests here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmbulnzLLC/devops-scratch.git"
+  },
+  "keywords": [
+    "aws"
+  ],
+  "author": "Jake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbulnzLLC/devops-scratch/issues"
+  },
+  "homepage": "https://github.com/AmbulnzLLC/devops-scratch#readme"
+}
