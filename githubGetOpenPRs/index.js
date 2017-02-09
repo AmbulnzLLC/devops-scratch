@@ -1,3 +1,4 @@
+const Promise = require('bluebird')
 const githubApi = require('github')
 const github = new githubApi()
 
@@ -7,13 +8,13 @@ github.authenticate({
 })
 
 getOpenPullRequests()
+  .then((prs)) => console.log(JSON.stringify(prs)))
 
 function getOpenPullRequests() {
-  github.pullRequests.getAll({
+  let getPRs = Promise.promisify(github.pullRequests.getAll)
+  getPRs({
     owner:   'AmbulnzLLC',
     repo:    'shadow-jsapps',
     state:   'open'
-  }, (err, res) => {
-    console.log(`Open Pull Requests: ${JSON.stringify(res)}`)
   })
 }
