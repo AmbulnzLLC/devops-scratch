@@ -9,6 +9,7 @@
   "author": "Jake Bladt <jake@jakebladt.com> (http://jake-bladt.github.io)",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.7",
     "github": "^8.1.1"
   }
 }
