@@ -8,7 +8,7 @@ var options = {
   path: '/'
 };
 
-http.get(options, function(res) {
+https.get(options, function(res) {
   console.log("Got response: " + res.statusCode);
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
