@@ -1,7 +1,11 @@
+var https = require('https');
+
+https://am-1876.ambulnz-dev.com:5143/
+
 var options = {
-  host: 'www.google.com',
-  port: 80,
-  path: '/index.html'
+  host: 'am-1876.ambulnz-dev.com',
+  port: 5143,
+  path: '/'
 };
 
 http.get(options, function(res) {
