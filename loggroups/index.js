@@ -12,3 +12,5 @@ function createLogGroup(prName) {
     })
   winston.log('created log group')
 }
+
+createLogGroup(process.argv[2]);
