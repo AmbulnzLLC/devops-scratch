@@ -7,7 +7,7 @@ function createLogGroup(prName) {
     { "logGroupName": `ambulnz-${prName}` }, 
     (err, data) => { 
       if(err) { winston.info(`error: ${err}`) } else {
-        winston.info(`data: ${data}`)
+        winston.info(`data: ${JSON.stringify(data)}`)
       } 
     })
   winston.log('created log group')
