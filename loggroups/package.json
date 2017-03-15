@@ -1,0 +1,15 @@
+{
+  "name": "loggroups",
+  "version": "1.0.0",
+  "description": "logggrps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo nope"
+  },
+  "author": "Jake Bladt <jake@jakebladt.com> (http://jake-bladt.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "github": "^8.1.1"
+  }
+}
