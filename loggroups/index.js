@@ -6,8 +6,8 @@ function createLogGroup(prName) {
   awsLogs.createLogGroup(
     { "logGroupName": `ambulnz-${prName}` }, 
     (err, data) => { 
-      if(err) { winston.info(err) } else {
-        winston.info(data)
+      if(err) { winston.info(`error: ${err}`) } else {
+        winston.info(`data: ${data}`)
       } 
     })
   winston.log('created log group')
