@@ -1,9 +1,3 @@
 let greeting = 'hello'
-
-let greeter = (function(g) {
-  return function() {
-    console.log(g)
-  }
-})(greeting)
-
-greeter()
+let greetingFactory = ((g) => () => `${g}, world.`)(greeting) 
+console.log(greetingFactory)
