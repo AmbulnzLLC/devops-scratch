@@ -1,3 +1,19 @@
 {
-  
+  "action": "synchronize",
+  "number": "1910",
+  "repository": {
+    "name": "JSApps"
+  },
+  "pull_request": {
+    "title": "AM-0001: Redeploy from Postman",
+    "user": {
+      "login": "postman-jake"
+    },
+    "head": {
+      "ref": "fix/AM-2215"
+    },
+    "base": {
+      "ref": "qa"
+    }
+  }  
 }
