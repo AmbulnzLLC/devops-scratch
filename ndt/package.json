@@ -1,0 +1,11 @@
+{
+  "name": "ndt",
+  "version": "1.0.0",
+  "description": "ndt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo nope"
+  },
+  "author": "",
+  "license": "ISC"
+}
