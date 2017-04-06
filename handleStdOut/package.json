@@ -1,0 +1,11 @@
+{
+  "name": "handlestdout",
+  "version": "1.0.0",
+  "description": "handlestdout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo notest"
+  },
+  "author": "Jake",
+  "license": "ISC"
+}
