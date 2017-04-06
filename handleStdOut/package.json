@@ -7,5 +7,8 @@
     "test": "echo notest"
   },
   "author": "Jake",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "child-process-promise": "^2.2.1"
+  }
 }
