@@ -1,0 +1,19 @@
+{
+  "action": "synchronize",
+  "number": "1918",
+  "repository": {
+    "name": "JSApps"
+  },
+  "pull_request": {
+    "title": "AM-0000 Deploy qa as prinstance",
+    "user": {
+      "login": "postman-jake"
+    },
+    "head": {
+      "ref": "tester/nullPR"
+    },
+    "base": {
+      "ref": "qa"
+    }
+  }  
+}
