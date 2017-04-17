@@ -1,0 +1,3 @@
+let str = "My string";
+
+
