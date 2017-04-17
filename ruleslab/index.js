@@ -3,7 +3,7 @@ function Box(x) {
     map:  f => Box(f(x)),
     fold: f => f(x),
     rules: [],
-    validate: () => rules.reduce((acc, f) => acc && f(x), true) 
+    validate: () => this.rules.reduce((acc, f) => acc && f(x), true) 
   }
 }
 
