@@ -1,4 +1,4 @@
-function Box(x) => {
+function Box = (x) => {
   return {
     map:  (f) => Box(f(x)),
     fold: (f) => f(x)
