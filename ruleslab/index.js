@@ -6,7 +6,5 @@ function Box(x) {
 }
 
 let str = Box("My string");
-
-str.rule = s => s = "My string";
-
-console.log(str.fold(x => rule(x)));
+str.rule = () => str.fold(s => s) === "My string";
+console.log(str.rule());
