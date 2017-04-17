@@ -15,4 +15,5 @@ function Rule(b, p) {
 
 let str = Box("My string");
 Rule(str, (s) => s === "My string");
+Rule(str, (s) => s === "MyString");
 console.log(str.validate());
