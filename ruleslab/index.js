@@ -13,12 +13,24 @@ function Rule(b, p) {
   b.rules.push(p);
 }
 
-let str = Box("My string");
-Rule(str, s => s === "My string");
-Rule(str, s => s.length > 1);
+function Testable(x) {
+  rules = [];
+
+  return {
+    fold: f => f ? f(x) : x,
+    rule: (p) => rules.push(p),
+    rules: rules,
+    validate: () => rules.reduce((acc, f) => acc && f(x), true) 
+  }
+}
+
+let str = Testable("My string");
+str.rule(s => s === "My string");
+str.rule(s => s.length > 1);
 console.log(str.validate());
 
-let int = Box(13);
-Rule(int, i => i > 10);
-Rule(int, i => 1 % 2 === 0);
+let int = Testable(13);
+int.rule(i => i > 10);
+int.rule(i => 1 % 2 === 0);
 console.log(int.validate());
+
