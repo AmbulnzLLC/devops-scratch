@@ -10,4 +10,5 @@ zone = r53_conn.get_zone('ambulnz-dev.com')
 zone_records = [z for z in zone.get_records() if z.name.startswith('am-')]
 
 dead = [r for r in zone_records if r.resource_records[0] not in active_ips] 
+print len(zone_records)
 print len(dead)
