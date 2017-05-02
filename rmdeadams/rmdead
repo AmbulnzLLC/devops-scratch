@@ -16,4 +16,6 @@ print 'Deleting ' + str(len(dead)) + ' unused DNS entries.'
 changes = ResourceRecordSets(r53_conn, zone.id)
 
 for d in dead:
-  d.delete()
+  print d
+
+print dir(dead[0])
