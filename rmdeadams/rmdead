@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from boto.route53.record import ResourceRecordSets
 import boto.ec2
 import boto.route53
 
@@ -10,5 +11,10 @@ zone = r53_conn.get_zone('ambulnz-dev.com')
 zone_records = [z for z in zone.get_records() if z.name.startswith('am-')]
 
 dead = [r for r in zone_records if r.resource_records[0] not in active_ips] 
-print len(zone_records)
-print len(dead)
+
+print 'Deleting ' + str(len(dead)) + ' unused DNS entries.'
+changes = ResourceRecordSets(r53_conn, zone.id)
+
+for d in dead:
+  change = changes.add_change("DELETE", d.name, "A")
+  print change
