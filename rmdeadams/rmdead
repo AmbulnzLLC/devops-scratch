@@ -19,3 +19,5 @@ for d in dead:
   change = changes.add_change("DELETE", d.name[:-1], "A")
   change.add_value(d.resource_records[0])
   print change
+
+print changes.commit()
