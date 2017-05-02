@@ -1,1 +1,12 @@
 #!/usr/bin/env python
+import boto.ec2
+import boto.route53
+
+ec2_conn = boto.ec2.connect_to_region("us-west-2")
+ec2_instances = [r.instances[0] for r in ec2_conn.get_all_reservations()]
+
+r53_conn = boto.route53.connect_to_region("us-west-2")
+zone = r53_conn.get_zone('ambulnz-dev.com')
+zone_records = [z for z in zone.get_records() if z.name.startswith('am-')]
+
+
