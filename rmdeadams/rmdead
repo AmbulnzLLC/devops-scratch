@@ -18,4 +18,4 @@ changes = ResourceRecordSets(r53_conn, zone.id)
 for d in dead:
   change = changes.add_change("DELETE", d.name[:-1], "A")
   change.add_value(d.resource_records[0])
-  print changes.commit()
+  print change
