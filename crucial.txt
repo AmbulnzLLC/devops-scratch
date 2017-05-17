@@ -1,3 +1,4 @@
 Crucial Systems:
-  EB Environments
-  
+  EB Environments (blue or green)
+  RDS Databases and Servers (MySQL)
+  ElastiCache services (RDS)
