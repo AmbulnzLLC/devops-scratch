@@ -2,7 +2,7 @@ var https = require('https');
 var util = require('util');
 
 var CHANNEL = "#aws-sns";
-var PATH = "/services/your-slack-webhook-url-info-goes-here";
+var PATH = "https://hooks.slack.com/services/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";
 
 exports.handler = function(event, context) {
     console.log(JSON.stringify(event, null, 2));
