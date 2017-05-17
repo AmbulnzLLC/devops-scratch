@@ -16,3 +16,6 @@ Web Servers:
 
 Load Balancers:
   Failed redirects
+
+Lambda Services:
+  General Health
