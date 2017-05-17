@@ -9,8 +9,8 @@ exports.handler = function(event, context) {
     console.log('From SNS:', event.Records[0].Sns.Message);
 
     var postData = {
-        "channel": CHANNEL,
-        "username": "AWS SNS",
+        "channel": "prod support",
+        "username": "cloudwatch-alarm",
         "text": "*" + event.Records[0].Sns.Subject + "*",
         "icon_emoji": ":aws:"
     };
