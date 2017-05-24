@@ -8,7 +8,8 @@
 
 ## Health Checks
 
-* Health checks can be setup on Nginx to fail if either node or Nginx returned a 5xx level error.
+* Health check should fail as soon as an API server starts returning 5xx-level errors at any time.
+* Health checks can be setup on Nginx.
 
 ## Database Performance
 
