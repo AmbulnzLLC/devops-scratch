@@ -22,3 +22,4 @@ To handle weird traffic spikes that degrade performance, consider the following:
 
 * Our lack of logging is killing our ability to make intelligent decisions about performance and prioritizing fixes.
 * Include htop on next generation prinstance-host image.
+* Action item: Update readme in JSApps to include information about repeatable migrations.
