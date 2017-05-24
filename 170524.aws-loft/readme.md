@@ -2,7 +2,13 @@
 
 ## Autoscaling Triggers
 
+* Our autoscaling triggers should be based on mean latency. 
+* Autoscaling policy will only do what we need if we fix pathological queries and health checks.
+* The only way to understand the correctness of a new autoscaling policy is to run load testers against the service and make sure it scales correctly. (Amazon does not have out-of-the-box load testers.)
+
 ## Health Checks
+
+* Health checks can be setup on Nginx to fail if either node or Nginx returned a 5xx level error.
 
 ## Database Performance
 
@@ -14,3 +20,4 @@ To handle weird traffic spikes that degrade performance, consider the following:
 # General Notes
 
 * Our lack of logging is killing our ability to make intelligent decisions about performance and prioritizing fixes.
+* Include htop on next generation prinstance-host image.
