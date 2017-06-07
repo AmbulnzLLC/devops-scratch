@@ -1,1 +1,1 @@
-USE open-jdk:9-jdk
+FROM open-jdk:9-jdk
