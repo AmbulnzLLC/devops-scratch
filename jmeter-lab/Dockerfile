@@ -3,4 +3,4 @@ MAINTAINER jake@jakebladt.com
 
 WORKDIR /jmeter
 COPY . /jmeter
-CMD ["/jmeter.run.sh"]
+CMD ["/jmeter/run.sh"]
