@@ -1,3 +1,4 @@
 Reserved instance (1 or 3 years.)
 Reserved capacity pricing
 Convertible reserved instances
+Spot blocks
