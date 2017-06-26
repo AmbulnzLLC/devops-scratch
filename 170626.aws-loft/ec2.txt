@@ -3,3 +3,4 @@ Edge services are not regioned.
 AZs have < 10 ms latency between them and can be mixed even in low-latency applications.
 DirectConnect?
 T2 instances are burstable.
+Host size effects connection speed - 10-20 GB per host, divided among EC2 instances.
