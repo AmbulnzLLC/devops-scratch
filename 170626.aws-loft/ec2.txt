@@ -5,3 +5,4 @@ DirectConnect?
 T2 instances are burstable.
 Host size effects connection speed - 10-20 GB per host, divided among EC2 instances.
 EBS magnetic volumes are super-inexpensive, sequential-read only.
+EFS supports NFSv4
