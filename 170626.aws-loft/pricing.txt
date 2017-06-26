@@ -4,3 +4,4 @@ Convertible reserved instances
 Spot blocks
 "Docker runs amazing on spot fleet"
 Spelunk for AWS - RI evaluation (trusted advisor) - all 3rd party
+Spot bidding is by AZ
