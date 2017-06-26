@@ -1,0 +1,2 @@
+AZs are multiple datacenters.
+Edge services are not regioned.
