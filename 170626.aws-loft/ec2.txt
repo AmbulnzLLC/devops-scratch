@@ -7,3 +7,4 @@ Host size effects connection speed - 10-20 GB per host, divided among EC2 instan
 EBS magnetic volumes are super-inexpensive, sequential-read only.
 EFS supports NFSv4
 Application load balancer can block by IP block.
+Custom metrics can be used for autoscaling policies
