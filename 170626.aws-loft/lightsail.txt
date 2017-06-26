@@ -1,0 +1,1 @@
+Lightsail is analgous to a single-instance Elastic Beanstalk.
