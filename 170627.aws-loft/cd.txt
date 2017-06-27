@@ -2,3 +2,4 @@ Daily deploymet good. Daily feedback required
 Virtuous cycle requires developer agency.
 + Actual code reviews
 "If this hurts, let's do it more often."
+Continuous deployment requires automated remediation.
