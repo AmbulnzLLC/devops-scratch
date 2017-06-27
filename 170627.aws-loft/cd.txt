@@ -9,3 +9,4 @@ Tag containers to git hash
 Test-on-standby
 Green-blue-canary
 Intelligent health checks
+Review Blue-Green Target-Group Swap
