@@ -3,3 +3,4 @@ Virtuous cycle requires developer agency.
 + Actual code reviews
 "If this hurts, let's do it more often."
 Continuous deployment requires automated remediation.
+Why do we install npm packages in build, then install them again inside container?
