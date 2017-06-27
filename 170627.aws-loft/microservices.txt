@@ -1,2 +1,4 @@
 Decoupling of databases - referential integrity?
 Microservice-level access to KMS.
+http://www.roryhart.net/code/microservices-but-what-about-foreign-keys-transactions/
+
