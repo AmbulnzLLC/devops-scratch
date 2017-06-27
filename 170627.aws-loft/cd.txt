@@ -8,3 +8,4 @@ CodeBuild vs. Jenkins
 Tag containers to git hash
 Test-on-standby
 Green-blue-canary
+Intelligent health checks
