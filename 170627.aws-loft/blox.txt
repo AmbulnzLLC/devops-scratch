@@ -3,3 +3,4 @@ Event Streams
 CSS (Cluster State Service)
 Blox is for large cluster scheduling with complex services.
 Integrates with Spot-Fleet
+Is there a minimum amount of time a spot instance will be available?
