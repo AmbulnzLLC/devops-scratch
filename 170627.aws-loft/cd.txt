@@ -1,2 +1,3 @@
 Daily deploymet good. Daily feedback required
 Virtuous cycle requires developer agency.
++ Actual code reviews
