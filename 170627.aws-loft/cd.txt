@@ -7,3 +7,4 @@ Why do we install npm packages in build, then install them again inside containe
 CodeBuild vs. Jenkins
 Tag containers to git hash
 Test-on-standby
+Green-blue-canary
