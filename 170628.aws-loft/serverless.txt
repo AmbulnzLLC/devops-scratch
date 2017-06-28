@@ -5,3 +5,5 @@ Fault tolerance by definition
 
 DynamoDB is now serverless
 API Gateway handles auth(ent/or)
+
+https://aws.amazon.com/blogs/compute/clojure/
