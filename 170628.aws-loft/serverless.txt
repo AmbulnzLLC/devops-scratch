@@ -10,3 +10,5 @@ https://aws.amazon.com/blogs/compute/clojure/
 
 DynamoDB->Kineses->Lambda ~= Firebase
 Lambda replaces cron
+
+SAM Application Model uses SAM Template
