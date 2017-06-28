@@ -5,3 +5,9 @@ Stack tracing and monitoring
 No agents. No heartbeats. Lack of data != error.
 No noise.
 
+Lambda supports put-metric-data
+
+API Gateway has built-in ERROR / INFO logging.
+
+Lambda logs from STD::OUT.
+
