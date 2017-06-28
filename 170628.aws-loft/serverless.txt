@@ -4,3 +4,4 @@ No pay for idle time
 Fault tolerance by definition
 
 DynamoDB is now serverless
+API Gateway handles auth(ent/or)
