@@ -1,2 +1,6 @@
 https://github.com/awslabs/aws-serverless-workshops/blob/master/DataProcessing/README.md
 
+AWS User profiles allow developers to use multiple profiles and switch between them. Set $AWS_PROFILE.
+
+AWS success stories.
+https://aws.amazon.com/solutions/case-studies/all/
