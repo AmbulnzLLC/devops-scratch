@@ -17,3 +17,9 @@ To trace requests across services, use Amazon X-Ray
 X-Ray is not an APM service
 
 % Trace < 100%
+
+XRay APIs have limited language support (JavaScript, Java.) Rackspace supports Python with Fleece.
+
+XRay has no active API Gateway support currently.
+
+Running it is a tradeoff.
