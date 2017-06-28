@@ -9,3 +9,4 @@ API Gateway handles auth(ent/or)
 https://aws.amazon.com/blogs/compute/clojure/
 
 DynamoDB->Kineses->Lambda ~= Firebase
+Lambda replaces cron
