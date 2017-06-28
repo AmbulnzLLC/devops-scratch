@@ -1,1 +1,6 @@
 Amazon.com was first written in Perl
+
+Stack tracing and monitoring
+
+No agents. No heartbeats. Lack of data != error.
+
