@@ -23,3 +23,5 @@ XRay APIs have limited language support (JavaScript, Java.) Rackspace supports P
 XRay has no active API Gateway support currently.
 
 Running it is a tradeoff.
+
+XRay agent runs anywhere.
