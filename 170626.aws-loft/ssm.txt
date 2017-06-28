@@ -1,1 +1,3 @@
 SSM is for large-batch computing and has little use for Ambulnz in the immediate term.
+
+If we switch to self-building PR Instances, we could use SSM to force them all to restart and rebuild when we push to devlop.
