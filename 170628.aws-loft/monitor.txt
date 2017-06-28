@@ -13,3 +13,5 @@ Lambda logs from STD::OUT.
 
 Logs export to S3 or ElasticCache
 
+To trace requests across services, use Amazon X-Ray
+
