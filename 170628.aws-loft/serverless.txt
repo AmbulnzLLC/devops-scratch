@@ -13,3 +13,5 @@ Lambda replaces cron
 
 SAM Application Model uses SAM Template
 SAM templates can replace the need to deploy via zip.
+
+API gateway can be backed by EB, EC2, etc.
