@@ -11,3 +11,5 @@ API Gateway has built-in ERROR / INFO logging.
 
 Lambda logs from STD::OUT.
 
+Logs export to S3 or ElasticCache
+
