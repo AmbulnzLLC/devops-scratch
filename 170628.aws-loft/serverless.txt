@@ -12,3 +12,4 @@ DynamoDB->Kineses->Lambda ~= Firebase
 Lambda replaces cron
 
 SAM Application Model uses SAM Template
+SAM templates can replace the need to deploy via zip.
