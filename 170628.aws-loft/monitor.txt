@@ -16,3 +16,4 @@ Logs export to S3 or ElasticCache
 To trace requests across services, use Amazon X-Ray
 X-Ray is not an APM service
 
+% Trace < 100%
