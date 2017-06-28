@@ -2,3 +2,5 @@ No provisioning or managing
 Scale with usage
 No pay for idle time
 Fault tolerance by definition
+
+DynamoDB is now serverless
